@@ -20,7 +20,7 @@ export const projects: Project[] = [
     tags: ["Golang", "MongoDB", "AWS", "PDM SaaS"],
     description:
       "Product Data Management SaaS for automotive and pharmaceutical domains, built with Go microservices, REST APIs, validation, and scalable integrations.",
-    meta: "Glabbr Technologies",
+    meta: "Product data SaaS",
     tone: "green",
   },
   {
@@ -64,11 +64,11 @@ export const projects: Project[] = [
     tone: "green",
   },
   {
-    title: "Leadzen AI Demo Platform",
+    title: "AI Demo Platform",
     tags: ["React", "TypeScript", "Chrome Extension", "AI Voiceover"],
     description:
       "Interactive content platform with screen-recording conversion into demos, guides, Chrome extension workflows, captions, and AI-generated voiceovers.",
-    meta: "Leadzen.ai / Hexus",
+    meta: "AI product workflow",
     tone: "blue",
   },
 ];

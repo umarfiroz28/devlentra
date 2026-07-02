@@ -16,7 +16,7 @@ const stories: ScrollStoryItem[] = [
     visual: "ai",
   },
   {
-    eyebrow: "IBM / ML Projects",
+    eyebrow: "Backend / ML Projects",
     title: "Backend, data, and ML systems built for measurable outcomes.",
     description:
       "Java Spring Boot services, Kafka workflows, Redis caching, dashboards, wafer fault detection, and cement strength prediction.",

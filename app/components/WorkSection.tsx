@@ -25,7 +25,7 @@ export function WorkSection() {
           </h2>
           <p className="apple-body mx-auto mt-5 max-w-[740px]">
             Production work, portfolio builds, and machine learning projects
-            across IBM, Leadzen.ai, Glabbr Technologies, Property10X, and
+            across ecommerce, SaaS, AI tooling, real-estate platforms, and
             independent engineering.
           </p>
         </div>

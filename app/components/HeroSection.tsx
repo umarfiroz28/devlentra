@@ -10,15 +10,14 @@ export function HeroSection() {
     >
       <div className="apple-wide-container grid min-h-[calc(100vh-44px)] items-center gap-10 py-8 lg:grid-cols-[0.92fr_1.08fr] lg:gap-8 lg:py-10">
         <div className="relative z-10 max-w-[640px] text-center lg:text-left">
-          <p className="apple-eyebrow">Devlentra by Umar Firoz.</p>
+          <p className="apple-eyebrow">Devlentra.</p>
           <h1 id="hero-title" className="apple-headline mt-4 max-w-[680px] text-balance">
             Full-stack software, websites, AI, and automation built beautifully.
           </h1>
           <p className="apple-body mt-6 max-w-[620px] text-balance">
-            I am a full-stack software engineer with 3.5 years of experience across
-            IBM, Leadzen.ai, and Glabbr Technologies, building React interfaces,
-            Java and Node APIs, Go services, AWS systems, GenAI workflows, and
-            affordable business websites.
+            Full-stack software and automation services for businesses that need
+            fast websites, React interfaces, Java and Node APIs, Go services,
+            AWS systems, GenAI workflows, and affordable launch-ready builds.
           </p>
           <div className="mt-8 flex flex-col items-center gap-4 sm:flex-row lg:items-start">
             <AppleButton href="#contact" variant="primary">

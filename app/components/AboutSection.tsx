@@ -12,13 +12,12 @@ export function AboutSection() {
           <div>
             <p className="apple-eyebrow">About</p>
             <h2 id="about-title" className="apple-section-title mt-3 text-balance">
-              Built by Umar Firoz, full-stack software engineer.
+              Built for practical full-stack product work.
             </h2>
             <p className="apple-body mt-5">
-              Devlentra is the service and portfolio brand for my engineering
-              work: React interfaces, Java Spring Boot microservices, Node.js
-              APIs, Go services, AWS infrastructure, GenAI workflows, data
-              products, and affordable websites for real businesses.
+              Devlentra builds React interfaces, Java Spring Boot services,
+              Node.js APIs, Go services, AWS-ready systems, GenAI workflows,
+              data products, and affordable websites for real businesses.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
@@ -27,7 +26,7 @@ export function AboutSection() {
                 <p className="apple-caption">{String(index + 1).padStart(2, "0")}</p>
                 <h3 className="mt-4 text-[22px] font-bold leading-tight tracking-[-0.03em] text-[#1D1D1F]">
                   {[
-                    "Experience",
+                    "Delivery",
                     "Stack",
                     "Impact",
                     "AI Engineering",

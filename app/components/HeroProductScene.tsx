@@ -150,7 +150,7 @@ export function HeroProductScene() {
                     Engineering stack
                   </p>
                   <p className="mt-1 text-2xl font-bold tracking-[-0.03em] text-[#1D1D1F]">
-                    Umar Firoz
+                    Devlentra
                   </p>
                 </div>
                 <span className="rounded-full bg-[#EAF3FF] px-3 py-1 text-sm text-[#0066CC]">

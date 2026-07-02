@@ -18,10 +18,9 @@ export function Footer() {
     >
       <div className="apple-wide-container">
         <p className="max-w-[780px] border-b border-[#D2D2D7] pb-5 text-[12px] leading-5 text-[#6E6E73]">
-          Devlentra is the portfolio and technology services brand of Umar
-          Firoz, a full-stack software engineer building affordable websites,
-          ecommerce stores, AI tools, data products, and full-stack applications
-          for businesses in India and worldwide.
+          Devlentra is an independent technology services brand building
+          affordable websites, ecommerce stores, AI tools, data products, and
+          full-stack applications for businesses in India and worldwide.
         </p>
         <div className="grid gap-8 border-b border-[#D2D2D7] py-7 text-[12px] leading-5 md:grid-cols-4">
           <div>

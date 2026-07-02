@@ -24,14 +24,14 @@ import {
 
 export const brand = {
   name: "Devlentra",
-  owner: "Umar Firoz",
-  title: "Full-Stack Software Engineer",
+  owner: "Devlentra Team",
+  title: "Full-stack software and automation services",
   email: "devlentra@gmail.com",
   phone: "+91 7310886909",
   whatsapp: "+91 7310886909",
-  linkedin: "linkedin.com/in/iumar28",
-  github: "github.com/iumar28",
-  portfolio: "umar-portfolio-woad.vercel.app",
+  linkedin: "Contact via email",
+  github: "Project links available on request",
+  portfolio: "Devlentra portfolio",
   location: "Hyderabad, Telangana",
 };
 
@@ -367,11 +367,11 @@ export const packages = [
 ];
 
 export const profileHighlights = [
-  "3.5 years building full-stack systems across IBM India, Leadzen.ai, and Glabbr Technologies.",
+  "Full-stack delivery across websites, APIs, ecommerce, dashboards, AI automation, and cloud-ready products.",
   "Java Spring Boot, React.js, Golang, Node.js, Python, AWS, Docker, Kubernetes, Kafka, Redis, and MongoDB.",
-  "Built enterprise workflows serving 10,000+ users and improved high-traffic API latency by up to 40%.",
-  "Hands-on with GenAI, LangChain, RAG, prompt engineering, and AI-assisted software delivery.",
-  "GATE 2022 CS/IT Rank 346, LeetCode Knight, and 1,200+ problems solved across coding platforms.",
+  "Performance-focused engineering for faster APIs, cleaner interfaces, reliable integrations, and scalable builds.",
+  "Hands-on GenAI, LangChain, RAG, prompt engineering, support automation, and AI-assisted delivery workflows.",
+  "Practical starter pricing for small launches, with scope-based quotes for custom products and automation.",
 ];
 
 export const contactServiceOptions = [
