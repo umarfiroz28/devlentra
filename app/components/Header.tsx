@@ -1,5 +1,6 @@
 import { ArrowUpRight } from "lucide-react";
 import { brand, navLinks } from "../data/site";
+import { LogoMark } from "./LogoMark";
 
 export function Header() {
   return (
@@ -8,10 +9,8 @@ export function Header() {
         className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8"
         aria-label="Primary navigation"
       >
-        <a href="#home" className="flex items-center gap-3 text-[#1D1D1F]">
-          <span className="flex h-9 w-9 items-center justify-center rounded-2xl border border-[#D2D2D7] bg-white text-sm font-bold text-[#0071E3] shadow-sm">
-            YT
-          </span>
+        <a href="#hero" className="flex items-center gap-3 text-[#1D1D1F]">
+          <LogoMark compact />
           <span className="text-sm font-semibold sm:text-base">{brand.name}</span>
         </a>
         <div className="hidden items-center gap-6 lg:flex">

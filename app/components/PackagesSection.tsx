@@ -4,12 +4,12 @@ import { SectionHeading } from "./SectionHeading";
 
 export function PackagesSection() {
   return (
-    <section id="packages" className="bg-[#F5F5F7] px-4 py-24 sm:px-6 lg:px-8">
+    <section id="pricing" className="bg-[#F5F5F7] px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
         <SectionHeading
-          eyebrow="Packages"
-          title="Custom quotes for the right level of build."
-          description="Start simple, grow into a business website, launch ecommerce, or build a custom AI/product system."
+          eyebrow="Pricing"
+          title="Starter prices for practical launches."
+          description="WordPress starts at Rs 1,499, Shopify at Rs 1,699, React at Rs 1,799, and custom products are quoted by scope."
           align="center"
         />
         <div className="mt-14 grid gap-5 lg:grid-cols-4">
@@ -25,7 +25,7 @@ export function PackagesSection() {
                   Popular
                 </span>
               ) : null}
-              <p className="text-sm font-semibold text-[#0071E3]">Custom Quote</p>
+              <p className="text-sm font-semibold text-[#0071E3]">Starter Scope</p>
               <h3 className="mt-4 text-2xl font-semibold text-[#1D1D1F]">
                 {item.title}
               </h3>
@@ -42,7 +42,7 @@ export function PackagesSection() {
                 href="#contact"
                 className="apple-btn apple-btn-primary mt-8 w-full focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
               >
-                Request Quote
+                Start here
               </a>
             </article>
           ))}

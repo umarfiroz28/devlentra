@@ -1,4 +1,5 @@
 import { brand, footerServices } from "../data/site";
+import { LogoMark } from "./LogoMark";
 
 const footerLinks = [
   { label: "Services", href: "#services" },
@@ -17,15 +18,18 @@ export function Footer() {
     >
       <div className="apple-wide-container">
         <p className="max-w-[780px] border-b border-[#D2D2D7] pb-5 text-[12px] leading-5 text-[#6E6E73]">
-          YourTech Studio is an independent technology services brand. We build
-          websites, AI tools, data products, and full-stack applications for
-          businesses in India and worldwide.
+          Devlentra is the portfolio and technology services brand of Umar
+          Firoz, a full-stack software engineer building affordable websites,
+          ecommerce stores, AI tools, data products, and full-stack applications
+          for businesses in India and worldwide.
         </p>
         <div className="grid gap-8 border-b border-[#D2D2D7] py-7 text-[12px] leading-5 md:grid-cols-4">
           <div>
-            <p className="font-semibold text-[#1D1D1F]">{brand.name}</p>
+            <LogoMark />
+            <p className="mt-3 text-[#6E6E73]">{brand.owner}</p>
+            <p className="mt-1 text-[#6E6E73]">{brand.title}</p>
             <p className="mt-3 text-[#6E6E73]">{brand.email}</p>
-            <p className="mt-1 text-[#6E6E73]">{brand.whatsapp}</p>
+            <p className="mt-1 text-[#6E6E73]">{brand.phone}</p>
             <p className="mt-1 text-[#6E6E73]">{brand.location}</p>
           </div>
           <div>
@@ -57,7 +61,7 @@ export function Footer() {
             <ul className="mt-3 grid gap-2 text-[#6E6E73]">
               <li>{brand.linkedin}</li>
               <li>{brand.github}</li>
-              <li>Built for Indian and global businesses</li>
+              <li>{brand.portfolio}</li>
             </ul>
           </div>
         </div>

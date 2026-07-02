@@ -30,7 +30,9 @@ export function ServiceTile({ service, featured = false, index }: ServiceTilePro
           <span className="flex h-12 w-12 items-center justify-center rounded-[18px] bg-[#F5F5F7] text-[#0071E3] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]">
             <Icon className="h-5 w-5" aria-hidden="true" />
           </span>
-          <span className="apple-caption">Service</span>
+          <span className="rounded-full bg-[#EAF3FF] px-3 py-1 text-xs font-semibold text-[#0066CC]">
+            {service.startingAt}
+          </span>
         </div>
         <h3 className="apple-card-title mt-7 max-w-[560px]">{service.title}</h3>
         <p className="mt-4 max-w-[600px] text-[17px] leading-7 text-[#6E6E73]">

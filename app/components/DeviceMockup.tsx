@@ -11,16 +11,16 @@ export function DeviceMockup() {
             <span className="h-3 w-3 rounded-full bg-[#28C840]" />
           </div>
           <span className="rounded-full bg-white px-4 py-1 text-xs font-medium text-[#86868B]">
-            yourtech.studio
+            devlentra.dev
           </span>
         </div>
         <div className="grid gap-4 p-5">
           <div className="rounded-[24px] bg-[linear-gradient(135deg,#EAF3FF,#F4ECFF,#ECFEFF)] p-5">
             <div className="flex items-center justify-between">
               <div>
-                <p className="text-xs font-semibold text-[#0071E3]">Product system</p>
+                <p className="text-xs font-semibold text-[#0071E3]">Devlentra system</p>
                 <h3 className="mt-2 text-2xl font-semibold text-[#1D1D1F]">
-                  AI + commerce pipeline
+                  AI + web delivery
                 </h3>
               </div>
               <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-white text-[#0071E3] shadow-sm">

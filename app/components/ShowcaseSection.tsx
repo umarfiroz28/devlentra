@@ -2,24 +2,24 @@ import { ScrollStory, type ScrollStoryItem } from "./ScrollStory";
 
 const stories: ScrollStoryItem[] = [
   {
-    eyebrow: "Ecommerce",
-    title: "A storefront shaped for discovery, trust, and checkout.",
+    eyebrow: "Property10X / Superspace",
+    title: "Commerce and real-estate products with real user flows.",
     description:
-      "Product storytelling, mobile-first sections, clean collections, and conversion paths become one polished commerce experience.",
+      "Property listings, location-aware catalogs, product discovery, responsive interfaces, Firebase flows, and business-friendly browsing experiences.",
     visual: "ecommerce",
   },
   {
-    eyebrow: "AI Automation",
-    title: "Manual work becomes a calm, useful AI workflow.",
+    eyebrow: "AutoStack / GenAI Assistant",
+    title: "AI workflows that reduce setup, triage, and documentation work.",
     description:
-      "Documents, messages, FAQs, and repeated tasks turn into assistants, summaries, routing, and team handoffs.",
+      "LLM workflows, RAG over codebases, support-ticket classification, generated scaffolds, CI/CD templates, and practical automation.",
     visual: "ai",
   },
   {
-    eyebrow: "Data Platform",
-    title: "Raw data becomes a product people can actually use.",
+    eyebrow: "IBM / ML Projects",
+    title: "Backend, data, and ML systems built for measurable outcomes.",
     description:
-      "Disconnected sources become dashboards, APIs, predictions, and interfaces built for day-to-day decisions.",
+      "Java Spring Boot services, Kafka workflows, Redis caching, dashboards, wafer fault detection, and cement strength prediction.",
     visual: "data",
   },
 ];
@@ -35,11 +35,11 @@ export function ShowcaseSection() {
         <div className="mx-auto max-w-[900px] text-center">
           <p className="apple-eyebrow">Showcase</p>
           <h2 id="showcase-title" className="apple-section-title mt-3">
-            From idea to product. In motion.
+            From resume to real product work.
           </h2>
           <p className="apple-body mx-auto mt-5 max-w-[760px]">
-            Scroll through how we turn business needs into polished digital
-            systems.
+            A closer look at the kind of engineering behind the projects,
+            services, and case studies in this portfolio.
           </p>
         </div>
         <div className="mt-14 grid gap-6 lg:block lg:space-y-8">

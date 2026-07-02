@@ -1,3 +1,5 @@
+import { LogoMark } from "./LogoMark";
+
 const navItems = [
   { label: "Services", href: "#services" },
   { label: "Work", href: "#work" },
@@ -16,10 +18,10 @@ export function GlobalNav() {
       >
         <a
           href="#hero"
-          className="apple-nav-link min-w-0 truncate font-semibold text-[#1D1D1F]"
-          aria-label="YourTech Studio home"
+          className="apple-nav-link min-w-0 truncate text-[#1D1D1F]"
+          aria-label="Devlentra home"
         >
-          YourTech Studio
+          <LogoMark />
         </a>
         <div className="ml-6 flex items-center gap-5 overflow-x-auto [scrollbar-width:none] sm:gap-8 [&::-webkit-scrollbar]:hidden">
           {navItems.map((item) => (

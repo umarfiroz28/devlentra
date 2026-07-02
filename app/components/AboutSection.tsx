@@ -1,4 +1,4 @@
-import { teamRoles } from "../data/site";
+import { profileHighlights } from "../data/site";
 
 export function AboutSection() {
   return (
@@ -12,24 +12,30 @@ export function AboutSection() {
           <div>
             <p className="apple-eyebrow">About</p>
             <h2 id="about-title" className="apple-section-title mt-3 text-balance">
-              A focused technology studio for practical product work.
+              Built by Umar Firoz, full-stack software engineer.
             </h2>
             <p className="apple-body mt-5">
-              We help businesses build modern websites, AI tools, ecommerce
-              platforms, dashboards, and full-stack applications with clean
-              design and strong engineering.
+              Devlentra is the service and portfolio brand for my engineering
+              work: React interfaces, Java Spring Boot microservices, Node.js
+              APIs, Go services, AWS infrastructure, GenAI workflows, data
+              products, and affordable websites for real businesses.
             </p>
           </div>
           <div className="grid gap-4 sm:grid-cols-2">
-            {teamRoles.map((role, index) => (
-              <article key={role} className="apple-card p-6">
+            {profileHighlights.map((highlight, index) => (
+              <article key={highlight} className="apple-card p-6">
                 <p className="apple-caption">{String(index + 1).padStart(2, "0")}</p>
                 <h3 className="mt-4 text-[22px] font-bold leading-tight tracking-[-0.03em] text-[#1D1D1F]">
-                  {role}
+                  {[
+                    "Experience",
+                    "Stack",
+                    "Impact",
+                    "AI Engineering",
+                    "Achievements",
+                  ][index]}
                 </h3>
                 <p className="mt-3 text-[15px] leading-6 text-[#6E6E73]">
-                  Placeholder profile ready for real qualifications, ownership,
-                  and delivery responsibilities.
+                  {highlight}
                 </p>
               </article>
             ))}

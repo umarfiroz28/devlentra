@@ -21,11 +21,12 @@ export function WorkSection() {
         <div className="mx-auto max-w-[900px] text-center">
           <p className="apple-eyebrow">Work</p>
           <h2 id="work-title" className="apple-section-title mt-3">
-            Selected work and concept builds.
+            Real projects from resume and portfolio.
           </h2>
           <p className="apple-body mx-auto mt-5 max-w-[740px]">
-            Representative product directions across commerce, AI, dashboards,
-            CMS, full-stack systems, and machine learning.
+            Production work, portfolio builds, and machine learning projects
+            across IBM, Leadzen.ai, Glabbr Technologies, Property10X, and
+            independent engineering.
           </p>
         </div>
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -52,6 +53,9 @@ export function WorkSection() {
                   </span>
                 ))}
               </div>
+              <p className="mt-5 text-sm font-semibold text-[#0066CC]">
+                {project.meta}
+              </p>
               <h3 className="mt-5 text-[26px] font-bold leading-[1.1] tracking-[-0.035em] text-[#1D1D1F]">
                 {project.title}
               </h3>

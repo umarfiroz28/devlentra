@@ -12,11 +12,12 @@ export function ServicesSection() {
         <div className="mx-auto max-w-[920px] text-center">
           <p className="apple-eyebrow">Services</p>
           <h2 id="services-title" className="apple-section-title mt-3 text-balance">
-            One studio for websites, AI, data, and full-stack products.
+            High-demand services at practical starter prices.
           </h2>
           <p className="apple-body mx-auto mt-5 max-w-[760px]">
-            Clean interfaces, useful automation, scalable engineering, and the
-            details that make a digital product feel premium.
+            WordPress starts at Rs 1,499, Shopify at Rs 1,699, and React or
+            Next.js websites at Rs 1,799. Larger API, AI, dashboard, and
+            full-stack builds are scoped honestly after a quick discussion.
           </p>
         </div>
         <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">

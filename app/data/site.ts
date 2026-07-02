@@ -23,12 +23,16 @@ import {
 } from "lucide-react";
 
 export const brand = {
-  name: "YourTech Studio",
-  email: "hello@yourtechstudio.com",
-  whatsapp: "+91 00000 00000",
-  linkedin: "linkedin.com/company/yourtechstudio",
-  github: "github.com/yourtechstudio",
-  location: "India, serving clients globally",
+  name: "Devlentra",
+  owner: "Umar Firoz",
+  title: "Full-Stack Software Engineer",
+  email: "devlentra@gmail.com",
+  phone: "+91 7310886909",
+  whatsapp: "+91 7310886909",
+  linkedin: "linkedin.com/in/iumar28",
+  github: "github.com/iumar28",
+  portfolio: "umar-portfolio-woad.vercel.app",
+  location: "Hyderabad, Telangana",
 };
 
 export const navLinks = [
@@ -109,21 +113,21 @@ export const services: Service[] = [
   {
     title: "GenAI Projects",
     description:
-      "AI assistants, chatbots, workflow automation, document intelligence, and custom AI tools for business operations.",
+      "AI assistants, RAG workflows, document tools, prompt engineering, and practical automation for teams.",
     icon: Bot,
     accent: "from-cyan-300 to-blue-500",
   },
   {
     title: "Shopify Development",
     description:
-      "Premium ecommerce stores designed for product discovery, mobile shopping, checkout flow, and conversions.",
+      "Starter Shopify stores, product pages, collection setup, responsive sections, and checkout-focused polish.",
     icon: Store,
     accent: "from-emerald-300 to-cyan-500",
   },
   {
     title: "WordPress Development",
     description:
-      "Professional business websites, blogs, CMS pages, landing pages, and SEO-ready WordPress experiences.",
+      "Business websites, landing pages, blogs, service pages, and SEO-ready WordPress setup.",
     icon: Globe2,
     accent: "from-sky-300 to-violet-400",
   },
@@ -137,42 +141,42 @@ export const services: Service[] = [
   {
     title: "React.js Development",
     description:
-      "Interactive frontend applications with reusable components, smooth UI, and scalable architecture.",
+      "Interactive React interfaces with reusable components, responsive UI, and API integration.",
     icon: Code2,
     accent: "from-blue-300 to-indigo-500",
   },
   {
     title: "Next.js Development",
     description:
-      "SEO-friendly, fast, production-ready websites and applications with modern routing and optimization.",
+      "Fast portfolio, SaaS, landing, and product pages using modern routing and optimization.",
     icon: Rocket,
     accent: "from-violet-300 to-cyan-400",
   },
   {
     title: "Node.js Development",
     description:
-      "Backend APIs, authentication, dashboards, integrations, and server-side application logic.",
+      "Node.js APIs, auth flows, integrations, dashboards, and server-side application logic.",
     icon: ServerCog,
     accent: "from-lime-300 to-cyan-400",
   },
   {
     title: "Java Full Stack",
     description:
-      "Enterprise-grade full-stack platforms with strong backend systems and modern frontend experiences.",
+      "Spring Boot APIs, secure backend workflows, microservices, and React admin experiences.",
     icon: Layers3,
     accent: "from-orange-200 to-violet-400",
   },
   {
     title: "Data Science",
     description:
-      "Dashboards, data analysis, reports, business insights, and decision-support systems.",
+      "Dashboards, reports, data analysis, business insights, and decision-support systems.",
     icon: LineChart,
     accent: "from-cyan-300 to-emerald-400",
   },
   {
     title: "Machine Learning",
     description:
-      "Prediction systems, recommendation engines, classification models, and intelligent data products.",
+      "Prediction systems, classifiers, model pipelines, and intelligent data products.",
     icon: BrainCircuit,
     accent: "from-fuchsia-300 to-blue-500",
   },
@@ -229,45 +233,45 @@ export type Project = {
 
 export const projects: Project[] = [
   {
-    title: "Premium Shopify Fashion Store",
-    tags: ["Shopify", "Ecommerce", "UI Design"],
+    title: "AutoStack",
+    tags: ["Spring Boot", "React", "AWS", "Terraform"],
     description:
-      "A polished storefront concept focused on product discovery, brand trust, and mobile-first conversion.",
-    accent: "from-emerald-300 to-cyan-400",
-  },
-  {
-    title: "AI Customer Support Assistant",
-    tags: ["GenAI", "Chatbot", "Automation"],
-    description:
-      "A support assistant concept that answers FAQs, routes leads, and summarizes customer conversations.",
-    accent: "from-violet-300 to-fuchsia-400",
-  },
-  {
-    title: "SaaS Analytics Dashboard",
-    tags: ["Next.js", "Data Science", "Dashboard"],
-    description:
-      "A product analytics interface for founders and operators who need clear metrics without clutter.",
+      "Full-stack platform that generates project scaffolds, REST API structures, Dockerfiles, and CI/CD pipelines using LLM workflows.",
     accent: "from-cyan-300 to-blue-500",
   },
   {
-    title: "WordPress Business Website",
-    tags: ["WordPress", "CMS", "SEO"],
+    title: "Knyo Cloud",
+    tags: ["Golang", "MongoDB", "AWS", "PDM"],
     description:
-      "A service-business website concept with editorial pages, lead capture, and CMS-ready structure.",
+      "Product Data Management SaaS for automotive and pharmaceutical domains, built with Go microservices and fault-tolerant APIs.",
+    accent: "from-emerald-300 to-cyan-400",
+  },
+  {
+    title: "Property10X",
+    tags: ["React", "Node.js", "Firebase", "Real Estate"],
+    description:
+      "Real estate web platform for buy, sell, rent listings, project discovery, property updates, and market content.",
     accent: "from-sky-300 to-violet-400",
   },
   {
-    title: "Java Full-Stack Management System",
-    tags: ["Java", "Backend", "React"],
+    title: "Superspace",
+    tags: ["MERN", "Tailwind CSS", "Firebase", "Commerce"],
     description:
-      "A management platform concept with secure workflows, role-based screens, and operational dashboards.",
+      "Location-aware market browsing app with dynamic product catalogs and a responsive shopping experience.",
     accent: "from-orange-200 to-blue-400",
   },
   {
-    title: "Machine Learning Prediction App",
-    tags: ["ML", "Python", "Dashboard"],
+    title: "GenAI Developer Assistant",
+    tags: ["Python", "FastAPI", "RAG", "LLM"],
     description:
-      "A prediction interface concept turning model outputs into understandable decisions and reports.",
+      "Productivity tool with multi-step LLM workflows and a RAG layer for code review, debugging, and documentation.",
+    accent: "from-violet-300 to-fuchsia-400",
+  },
+  {
+    title: "Wafer Fault Detection",
+    tags: ["Machine Learning", "XGBoost", "Random Forest"],
+    description:
+      "ML system for detecting faulty wafers using clustering, validation pipelines, GridSearchCV, XGBoost, and Random Forest.",
     accent: "from-lime-300 to-cyan-400",
   },
 ];
@@ -320,79 +324,80 @@ export const whyPoints = [
 
 export const packages = [
   {
-    title: "Starter Website",
-    bestFor: "Personal brands, small businesses, local businesses",
-    includes: ["3-5 pages", "Responsive design", "Contact form", "Basic SEO", "Fast loading"],
+    title: "WordPress Starter - Rs 1,499+",
+    bestFor: "Local businesses, service websites, blogs, and quick launches",
+    includes: ["1-3 pages", "Responsive setup", "Contact form", "Basic SEO", "Speed cleanup"],
   },
   {
-    title: "Business Website",
-    bestFor: "Growing companies and service businesses",
+    title: "Shopify Starter - Rs 1,699+",
+    bestFor: "Small product brands starting an online store",
     includes: [
-      "5-10 pages",
-      "CMS or admin-friendly structure",
-      "Advanced sections",
-      "Animations",
-      "SEO setup",
-      "Lead generation forms",
+      "Theme setup",
+      "Product upload support",
+      "Collection basics",
+      "Essential store pages",
+      "Payment readiness check",
+      "Mobile storefront polish",
     ],
   },
   {
-    title: "Ecommerce Website",
-    bestFor: "Online stores and product brands",
-    includes: [
-      "Shopify setup",
-      "Product pages",
-      "Collection pages",
-      "Payment setup",
-      "Mobile optimization",
-      "Conversion-focused design",
-    ],
-  },
-  {
-    title: "Custom Product / AI Solution",
-    bestFor: "Startups, teams, and businesses with custom requirements",
+    title: "React Website - Rs 1,799+",
+    bestFor: "Portfolios, landing pages, SaaS pages, and modern business sites",
     includes: [
       "React / Next.js frontend",
-      "Node.js / Java backend",
-      "GenAI integrations",
+      "Responsive sections",
+      "Reusable components",
+      "Contact CTA",
+      "Performance-minded build",
+      "Deployment guidance",
+    ],
+  },
+  {
+    title: "Custom Product - Rs 4,999+",
+    bestFor: "Founders and teams needing APIs, dashboards, AI, or full-stack systems",
+    includes: [
+      "React frontend",
+      "Node.js / Java APIs",
+      "Database integration",
+      "AI automation options",
       "Data dashboards",
-      "ML features",
-      "APIs and deployment",
+      "Deployment support",
     ],
   },
 ];
 
-export const teamRoles = [
-  "Founder / Project Lead",
-  "Frontend Developer",
-  "Backend Developer",
-  "AI / Data Specialist",
-  "Designer",
+export const profileHighlights = [
+  "3.5 years building full-stack systems across IBM India, Leadzen.ai, and Glabbr Technologies.",
+  "Java Spring Boot, React.js, Golang, Node.js, Python, AWS, Docker, Kubernetes, Kafka, Redis, and MongoDB.",
+  "Built enterprise workflows serving 10,000+ users and improved high-traffic API latency by up to 40%.",
+  "Hands-on with GenAI, LangChain, RAG, prompt engineering, and AI-assisted software delivery.",
+  "GATE 2022 CS/IT Rank 346, LeetCode Knight, and 1,200+ problems solved across coding platforms.",
 ];
 
 export const contactServiceOptions = [
-  "Website Development",
-  "Shopify Store",
-  "WordPress Website",
-  "React / Next.js App",
-  "Java Full-Stack Project",
-  "GenAI Project",
-  "Data Science / ML Project",
-  "Custom Requirement",
+  "WordPress Website - starts at Rs 1,499",
+  "Shopify Store - starts at Rs 1,699",
+  "React / Next.js Website - starts at Rs 1,799",
+  "Portfolio / Landing Page - starts at Rs 999",
+  "Node.js API - starts at Rs 2,499",
+  "Java Spring Boot API - starts at Rs 2,999",
+  "AI Automation / Chatbot - starts at Rs 2,999",
+  "Data Dashboard / ML Project - starts at Rs 2,499",
+  "Custom Full-Stack Product",
 ];
 
 export const budgetOptions = [
-  "Under Rs 25,000",
-  "Rs 25,000 - Rs 50,000",
-  "Rs 50,000 - Rs 1,00,000",
-  "Rs 1,00,000+",
-  "International project budget",
+  "Under Rs 2,000",
+  "Rs 2,000 - Rs 5,000",
+  "Rs 5,000 - Rs 15,000",
+  "Rs 15,000 - Rs 50,000",
+  "Rs 50,000+",
 ];
 
 export const footerServices = [
-  "GenAI projects",
-  "Shopify development",
-  "Next.js apps",
-  "Data dashboards",
+  "WordPress from Rs 1,499",
+  "Shopify from Rs 1,699",
+  "React from Rs 1,799",
+  "AI automation",
   "Full-stack products",
 ];

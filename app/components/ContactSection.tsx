@@ -17,10 +17,10 @@ export function ContactSection() {
           <div>
             <p className="apple-eyebrow">Contact</p>
             <h2 id="contact-title" className="apple-section-title mt-3 text-balance">
-              Tell us what you want to build.
+              Tell me what you want to build.
             </h2>
             <p className="apple-body mt-5 max-w-[620px]">
-              Share your idea and we will help you choose the right technology,
+              Share your idea and I will help you choose the right technology,
               product path, and first build scope.
             </p>
             <div className="mt-8 flex flex-col gap-4 sm:flex-row">
@@ -38,7 +38,7 @@ export function ContactSection() {
               </p>
               <p className="flex items-center gap-3">
                 <MessageCircle className="h-4 w-4 text-[#0071E3]" aria-hidden="true" />
-                {brand.whatsapp}
+                {brand.phone}
               </p>
               <p className="flex items-center gap-3">
                 <Network className="h-4 w-4 text-[#0071E3]" aria-hidden="true" />
@@ -71,7 +71,7 @@ export function ContactSection() {
             </div>
             <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
               Phone / WhatsApp
-              <input className={inputClass} name="phone" placeholder="+91 00000 00000" />
+              <input className={inputClass} name="phone" placeholder="+91 7310886909" />
             </label>
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">

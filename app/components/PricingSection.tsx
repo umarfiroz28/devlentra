@@ -13,11 +13,12 @@ export function PricingSection() {
         <div className="mx-auto max-w-[900px] text-center">
           <p className="apple-eyebrow">Pricing</p>
           <h2 id="pricing-title" className="apple-section-title mt-3">
-            Choose the right starting point.
+            Starter pricing that makes sense.
           </h2>
           <p className="apple-body mx-auto mt-5 max-w-[720px]">
-            Each package is a practical baseline. Scope, timelines, and pricing
-            are finalized after we understand the product properly.
+            These are nominal starting prices for small, clearly scoped work.
+            Custom design, integrations, content volume, apps, APIs, and
+            timelines are quoted after understanding the requirement.
           </p>
         </div>
         <div className="mt-14 grid gap-5 lg:grid-cols-4">
@@ -43,6 +44,20 @@ export function PricingSection() {
                     </span>
                   ) : null}
                 </div>
+                <p
+                  className={`mt-5 text-[42px] font-bold leading-none tracking-[-0.05em] ${
+                    item.popular ? "text-white" : "text-[#1D1D1F]"
+                  }`}
+                >
+                  {item.startingAt}
+                </p>
+                <p
+                  className={`mt-2 text-[13px] ${
+                    item.popular ? "text-white/58" : "text-[#86868B]"
+                  }`}
+                >
+                  starting price
+                </p>
                 <p
                   className={`mt-4 text-[15px] leading-6 ${
                     item.popular ? "text-white/72" : "text-[#6E6E73]"

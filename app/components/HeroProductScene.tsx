@@ -19,32 +19,32 @@ import { FloatingPanel } from "./FloatingPanel";
 
 const panels = [
   {
-    title: "AI Assistant",
-    detail: "Answers, routes, automates",
+    title: "GenAI Workflow",
+    detail: "RAG, bots, automation",
     icon: Bot,
     className: "left-2 top-12 w-[230px] -translate-z-8",
   },
   {
-    title: "Storefront",
-    detail: "Product pages and checkout",
+    title: "Shopify Store",
+    detail: "Starts at Rs 1,699",
     icon: ShoppingBag,
     className: "right-0 top-8 w-[230px]",
   },
   {
     title: "Data Insights",
-    detail: "Dashboards and predictions",
+    detail: "Dashboards and ML",
     icon: ChartNoAxesCombined,
     className: "-left-1 bottom-20 w-[238px]",
   },
   {
     title: "API Layer",
-    detail: "Node, Java, integrations",
+    detail: "Java, Node, Go",
     icon: Braces,
     className: "right-5 bottom-24 w-[218px]",
   },
   {
-    title: "Code Studio",
-    detail: "React, Next.js, systems",
+    title: "React Studio",
+    detail: "Starts at Rs 1,799",
     icon: Code2,
     className: "left-1/2 top-0 w-[220px] -translate-x-1/2",
   },
@@ -98,12 +98,12 @@ export function HeroProductScene() {
               </span>
               <span>
                 <span className="block text-sm font-semibold text-[#1D1D1F]">
-                  Product Hub
+                  Devlentra Hub
                 </span>
-                <span className="apple-caption">Live delivery system</span>
+                <span className="apple-caption">Portfolio and services</span>
               </span>
             </div>
-            {["Website", "AI workflow", "Store", "Dashboard"].map((item, index) => (
+            {["WordPress", "Shopify", "React", "AI/ML"].map((item, index) => (
               <div
                 key={item}
                 className="mb-3 flex items-center justify-between rounded-2xl bg-[#F5F5F7] px-4 py-3 text-sm text-[#1D1D1F]"
@@ -123,10 +123,10 @@ export function HeroProductScene() {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-xs font-semibold uppercase text-[#86868B]">
-                    Build pipeline
+                    Engineering stack
                   </p>
                   <p className="mt-1 text-2xl font-bold tracking-[-0.03em] text-[#1D1D1F]">
-                    Digital product stack
+                    Umar Firoz
                   </p>
                 </div>
                 <span className="rounded-full bg-[#EAF3FF] px-3 py-1 text-sm text-[#0066CC]">
@@ -140,7 +140,7 @@ export function HeroProductScene() {
                       {value}%
                     </span>
                     <span className="mt-1 block text-xs text-[#6E6E73]">
-                      {["UI", "AI", "Data"][index]}
+                      {["React", "AWS", "API"][index]}
                     </span>
                   </div>
                 ))}

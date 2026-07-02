@@ -1,5 +1,6 @@
 export type Package = {
   title: string;
+  startingAt: string;
   bestFor: string;
   includes: string[];
   popular?: boolean;
@@ -7,45 +8,49 @@ export type Package = {
 
 export const packages: Package[] = [
   {
-    title: "Starter Website",
-    bestFor: "Personal brands, small businesses, local businesses",
-    includes: ["3-5 pages", "Responsive design", "Contact form", "Basic SEO", "Fast loading"],
+    title: "WordPress Starter",
+    startingAt: "Rs 1,499",
+    bestFor: "Local businesses, service pages, blogs, and quick launches",
+    includes: ["1-3 pages", "Mobile responsive setup", "Contact form", "Basic SEO", "Speed cleanup"],
   },
   {
-    title: "Business Website",
-    bestFor: "Growing companies and service businesses",
+    title: "Shopify Starter",
+    startingAt: "Rs 1,699",
+    bestFor: "Small product brands starting an online store",
     popular: true,
     includes: [
-      "5-10 pages",
-      "CMS or admin-friendly structure",
-      "Advanced sections",
-      "Animations",
-      "SEO setup",
-      "Lead generation forms",
+      "Theme setup",
+      "Product upload support",
+      "Collection page basics",
+      "Essential store pages",
+      "Payment readiness check",
+      "Mobile storefront polish",
     ],
   },
   {
-    title: "Ecommerce Website",
-    bestFor: "Online stores and product brands",
-    includes: [
-      "Shopify setup",
-      "Product pages",
-      "Collection pages",
-      "Payment setup",
-      "Mobile optimization",
-      "Conversion-focused design",
-    ],
-  },
-  {
-    title: "Custom Product / AI Solution",
-    bestFor: "Startups, teams, and businesses with custom requirements",
+    title: "React Website",
+    startingAt: "Rs 1,799",
+    bestFor: "Portfolios, landing pages, SaaS pages, and modern business sites",
     includes: [
       "React / Next.js frontend",
-      "Node.js / Java backend",
-      "GenAI integrations",
+      "Responsive sections",
+      "Reusable components",
+      "Contact CTA",
+      "Performance-minded build",
+      "Deployment guidance",
+    ],
+  },
+  {
+    title: "Custom Product",
+    startingAt: "Rs 4,999",
+    bestFor: "Founders and teams who need APIs, dashboards, AI, or full-stack systems",
+    includes: [
+      "React frontend",
+      "Node.js / Java APIs",
+      "Database integration",
+      "AI automation options",
       "Data dashboards",
-      "ML features",
-      "APIs and deployment",
+      "Deployment support",
     ],
   },
 ];
