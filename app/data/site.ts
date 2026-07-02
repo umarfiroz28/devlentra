@@ -32,11 +32,13 @@ export const brand = {
 };
 
 export const navLinks = [
-  { label: "Home", href: "#home" },
+  { label: "Home", href: "#hero" },
   { label: "Services", href: "#services" },
   { label: "Work", href: "#work" },
+  { label: "AI", href: "#showcase" },
+  { label: "Data", href: "#showcase" },
   { label: "Process", href: "#process" },
-  { label: "Packages", href: "#packages" },
+  { label: "Pricing", href: "#pricing" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
 ];

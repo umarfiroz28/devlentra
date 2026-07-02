@@ -1,45 +1,39 @@
-"use client";
-
-import { motion, useReducedMotion } from "framer-motion";
-import { processSteps } from "../data/site";
-import { SectionHeading } from "./SectionHeading";
+import { processSteps } from "../data/process";
 
 export function ProcessSection() {
-  const prefersReducedMotion = useReducedMotion();
-
   return (
-    <section id="process" className="bg-[#F5F5F7] px-4 py-24 sm:px-6 lg:px-8">
-      <div className="mx-auto max-w-7xl">
-        <SectionHeading
-          eyebrow="Process"
-          title="Designed with Clarity. Built with Engineering."
-          description="A simple delivery model that keeps strategy, design, development, performance, and launch support connected."
-        />
-        <div className="mt-14 grid gap-4 md:grid-cols-2 xl:grid-cols-6">
+    <section
+      id="process"
+      aria-labelledby="process-title"
+      className="bg-[#FBFBFD] px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
+    >
+      <div className="apple-container">
+        <div className="text-center">
+          <p className="apple-eyebrow">Process</p>
+          <h2 id="process-title" className="apple-section-title mx-auto mt-3 max-w-[820px]">
+            A simple process. A polished result.
+          </h2>
+        </div>
+        <div className="mt-14 grid gap-4 md:grid-cols-2">
           {processSteps.map((step, index) => {
             const Icon = step.icon;
             return (
-              <motion.article
-                key={step.title}
-                initial={prefersReducedMotion ? false : { opacity: 0, y: 22 }}
-                whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.42, delay: index * 0.05 }}
-                className="apple-card relative rounded-[30px] p-6"
-              >
-                <div className="flex items-center justify-between">
-                  <span className="text-5xl font-semibold text-[#D2D2D7]">
-                    {String(index + 1).padStart(2, "0")}
-                  </span>
-                  <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EAF3FF] text-[#0071E3]">
+              <article key={step.title} className="apple-card p-6 sm:p-7">
+                <div className="flex items-start gap-5">
+                  <span className="flex h-12 w-12 shrink-0 items-center justify-center rounded-[18px] bg-[#F5F5F7] text-[#0071E3]">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
+                  <div>
+                    <p className="apple-caption">Step {String(index + 1).padStart(2, "0")}</p>
+                    <h3 className="mt-2 text-[24px] font-bold leading-tight tracking-[-0.03em] text-[#1D1D1F]">
+                      {step.title}
+                    </h3>
+                    <p className="mt-3 text-[16px] leading-7 text-[#6E6E73]">
+                      {step.description}
+                    </p>
+                  </div>
                 </div>
-                <h3 className="mt-8 text-xl font-semibold text-[#1D1D1F]">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm leading-7 text-[#6E6E73]">{step.description}</p>
-              </motion.article>
+              </article>
             );
           })}
         </div>
