@@ -69,7 +69,7 @@ export function HeroProductScene() {
 
   return (
     <div
-      className="surface-3d relative mx-auto h-[480px] w-full max-w-[720px] sm:h-[560px] lg:mx-0 lg:ml-auto lg:h-[620px] lg:max-w-none"
+      className="surface-3d relative mx-auto h-[430px] w-full max-w-[680px] sm:h-[500px] lg:mx-0 lg:ml-auto lg:h-[560px] lg:max-w-none"
       onMouseMove={(event) => {
         const rect = event.currentTarget.getBoundingClientRect();
         pointerX.set((event.clientX - rect.left) / rect.width - 0.5);
@@ -82,21 +82,21 @@ export function HeroProductScene() {
       aria-label="Interactive product scene showing websites, AI, data, APIs, and code"
     >
       <motion.div
-        className="absolute right-8 top-8 hidden h-[74%] w-[78%] rounded-[40px] border border-white/70 bg-white/34 shadow-[0_28px_90px_rgba(0,0,0,0.08)] backdrop-blur-xl lg:block"
+        className="absolute right-8 top-6 hidden h-[72%] w-[78%] rounded-[36px] border border-white/70 bg-white/34 shadow-[0_28px_90px_rgba(0,0,0,0.08)] backdrop-blur-xl lg:block"
         initial={{ opacity: 0, x: 40, rotate: 2 }}
         animate={{ opacity: 1, x: 0, rotate: -3 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         aria-hidden="true"
       />
       <motion.div
-        className="absolute bottom-8 right-0 hidden h-[58%] w-[58%] rounded-[36px] border border-white/70 bg-[#FBFBFD]/70 shadow-[0_20px_70px_rgba(0,0,0,0.07)] backdrop-blur-xl lg:block"
+        className="absolute bottom-6 right-0 hidden h-[56%] w-[56%] rounded-[32px] border border-white/70 bg-[#FBFBFD]/70 shadow-[0_20px_70px_rgba(0,0,0,0.07)] backdrop-blur-xl lg:block"
         initial={{ opacity: 0, x: 30, y: 30, rotate: -4 }}
         animate={{ opacity: 1, x: 0, y: 0, rotate: 4 }}
         transition={{ delay: 0.12, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         aria-hidden="true"
       />
       <motion.div
-        className="absolute inset-x-2 top-16 mx-auto h-[350px] max-w-[680px] rounded-[36px] bg-white shadow-[0_34px_110px_rgba(0,0,0,0.18)] ring-1 ring-black/8 sm:top-[88px] sm:h-[420px] lg:inset-x-auto lg:right-8 lg:top-24 lg:h-[430px] lg:w-[620px]"
+        className="absolute inset-x-2 top-12 mx-auto h-[330px] max-w-[650px] rounded-[34px] bg-white shadow-[0_34px_110px_rgba(0,0,0,0.18)] ring-1 ring-black/8 sm:top-[70px] sm:h-[390px] lg:inset-x-auto lg:right-8 lg:top-20 lg:h-[390px] lg:w-[580px]"
         initial={{ opacity: 0, y: 42, scale: 0.96 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
@@ -200,7 +200,7 @@ export function HeroProductScene() {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-4 left-4 right-4 rounded-[26px] border border-white/70 bg-white/88 p-4 shadow-[0_22px_70px_rgba(0,0,0,0.14)] backdrop-blur-2xl sm:left-auto sm:right-6 sm:w-[330px] lg:bottom-[72px] lg:right-2"
+        className="absolute bottom-3 left-4 right-4 rounded-[24px] border border-white/70 bg-white/88 p-3 shadow-[0_22px_70px_rgba(0,0,0,0.14)] backdrop-blur-2xl sm:left-auto sm:right-6 sm:w-[320px] lg:bottom-[54px] lg:right-2"
         initial={{ opacity: 0, y: 26 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.55, duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
@@ -222,7 +222,7 @@ export function HeroProductScene() {
       </motion.div>
 
       <motion.div
-        className="absolute left-4 top-[58%] hidden w-[260px] rounded-[24px] border border-white/70 bg-[#1D1D1F] p-4 text-white shadow-[0_24px_70px_rgba(0,0,0,0.2)] md:block lg:left-0"
+        className="absolute left-4 top-[56%] hidden w-[250px] rounded-[22px] border border-white/70 bg-[#1D1D1F] p-4 text-white shadow-[0_24px_70px_rgba(0,0,0,0.2)] md:block lg:left-0"
         initial={{ opacity: 0, x: -30, rotateY: -10 }}
         animate={{ opacity: 1, x: 0, rotateY: 0 }}
         transition={{ delay: 0.72, duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
