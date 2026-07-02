@@ -33,17 +33,17 @@ export function FloatingCard({ item, index }: FloatingCardProps) {
         },
       }}
       whileHover={prefersReducedMotion ? undefined : { y: -6, scale: 1.02 }}
-      className="group rounded-lg border border-white/10 bg-slate-950/70 p-4 shadow-[0_18px_80px_rgba(14,165,233,0.12)] backdrop-blur-xl transition-colors hover:border-cyan-300/40"
+      className="group rounded-[22px] border border-[#D2D2D7]/80 bg-white/90 p-4 shadow-[0_24px_60px_rgba(29,29,31,0.12)] backdrop-blur-xl transition hover:border-[#0071E3]/30"
     >
       <div className="flex items-center gap-3">
         <span
-          className={`flex h-10 w-10 items-center justify-center rounded-lg bg-gradient-to-br ${item.accent} text-slate-950 shadow-[0_0_28px_rgba(34,211,238,0.22)]`}
+          className={`flex h-10 w-10 items-center justify-center rounded-2xl bg-gradient-to-br ${item.accent} text-[#0071E3] shadow-sm`}
         >
           <Icon className="h-5 w-5" aria-hidden="true" />
         </span>
         <div>
-          <h3 className="text-sm font-semibold text-white">{item.title}</h3>
-          <p className="mt-1 text-xs leading-5 text-slate-400">{item.detail}</p>
+          <h3 className="text-sm font-semibold text-[#1D1D1F]">{item.title}</h3>
+          <p className="mt-1 text-xs leading-5 text-[#6E6E73]">{item.detail}</p>
         </div>
       </div>
     </motion.article>

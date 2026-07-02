@@ -19,19 +19,22 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
       whileInView={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-80px" }}
       transition={{ duration: 0.45, delay: index * 0.04, ease: "easeOut" }}
-      whileHover={prefersReducedMotion ? undefined : { y: -6 }}
-      className="group rounded-lg border border-white/10 bg-white/[0.045] p-6 shadow-[0_24px_80px_rgba(2,6,23,0.22)] backdrop-blur transition-colors hover:border-cyan-200/45 hover:bg-white/[0.07]"
+      whileHover={prefersReducedMotion ? undefined : { y: -10, rotateX: 2, rotateY: -2 }}
+      className="apple-card group min-h-[330px] rounded-[32px] p-7 transition duration-300 hover:border-[#0071E3]/30 hover:shadow-[0_34px_80px_rgba(0,113,227,0.12)]"
+      style={{ transformStyle: "preserve-3d" }}
     >
       <div
-        className={`flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br ${service.accent} text-slate-950 shadow-[0_0_34px_rgba(34,211,238,0.18)]`}
+        className={`flex h-14 w-14 items-center justify-center rounded-3xl bg-gradient-to-br ${service.accent} text-[#0071E3] shadow-sm`}
       >
         <Icon className="h-6 w-6" aria-hidden="true" />
       </div>
-      <h3 className="mt-6 text-lg font-semibold text-white">{service.title}</h3>
-      <p className="mt-3 text-sm leading-7 text-slate-300">{service.description}</p>
+      <h3 className="mt-8 text-2xl font-semibold tracking-[-0.02em] text-[#1D1D1F]">
+        {service.title}
+      </h3>
+      <p className="mt-4 text-[15px] leading-7 text-[#6E6E73]">{service.description}</p>
       <a
         href="#contact"
-        className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-cyan-200 transition-colors hover:text-white"
+        className="mt-7 inline-flex items-center gap-1 text-sm font-semibold text-[#0071E3] transition-colors hover:text-[#0077ED]"
       >
         Explore service
         <ArrowUpRight className="h-4 w-4" aria-hidden="true" />

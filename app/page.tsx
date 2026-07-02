@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <Header />
-      <main className="min-h-screen bg-[#030712] text-white">
+      <main className="min-h-screen bg-[#F5F5F7] text-[#1D1D1F]">
         <HeroSection />
         <ServicesSection />
         <MotionShowcaseSection />

@@ -1,7 +1,6 @@
 import type { LucideIcon } from "lucide-react";
 import {
   Bot,
-  Boxes,
   BrainCircuit,
   ChartNoAxesCombined,
   Code2,
@@ -51,52 +50,40 @@ export type FloatingCardItem = {
 
 export const floatingCards: FloatingCardItem[] = [
   {
-    title: "Shopify store",
-    detail: "Conversion-ready commerce",
+    title: "Shopify Store",
+    detail: "Mobile checkout flow",
     icon: ShoppingBag,
-    accent: "from-cyan-400 to-blue-500",
+    accent: "from-[#EAF3FF] to-[#ECFEFF]",
   },
   {
-    title: "AI chatbot",
-    detail: "Support and workflow answers",
+    title: "AI Chatbot",
+    detail: "Answers and automations",
     icon: Bot,
-    accent: "from-violet-400 to-fuchsia-500",
+    accent: "from-[#F4ECFF] to-[#EAF3FF]",
   },
   {
-    title: "Analytics dashboard",
-    detail: "Business metrics in focus",
+    title: "Analytics Dashboard",
+    detail: "Decision-ready insights",
     icon: LayoutDashboard,
-    accent: "from-sky-400 to-cyan-300",
+    accent: "from-[#ECFEFF] to-[#EAF3FF]",
   },
   {
-    title: "React app",
-    detail: "Fast interactive products",
+    title: "Code Editor",
+    detail: "Reusable product UI",
     icon: Code2,
-    accent: "from-blue-400 to-indigo-500",
+    accent: "from-[#F7F7F8] to-[#E8E4DD]",
   },
   {
-    title: "WordPress website",
-    detail: "CMS-led business pages",
-    icon: Boxes,
-    accent: "from-teal-300 to-cyan-500",
-  },
-  {
-    title: "ML model",
-    detail: "Prediction and automation",
+    title: "ML Insights",
+    detail: "Prediction signals",
     icon: BrainCircuit,
-    accent: "from-purple-400 to-blue-400",
+    accent: "from-[#F4ECFF] to-[#ECFEFF]",
   },
   {
-    title: "Backend API",
-    detail: "Secure server logic",
+    title: "Backend API Node",
+    detail: "Secure integrations",
     icon: Network,
-    accent: "from-cyan-300 to-violet-400",
-  },
-  {
-    title: "Next.js website",
-    detail: "SEO and performance first",
-    icon: Sparkles,
-    accent: "from-blue-300 to-cyan-300",
+    accent: "from-[#EAF3FF] to-[#FDFDFD]",
   },
 ];
 
@@ -120,21 +107,21 @@ export const services: Service[] = [
   {
     title: "GenAI Projects",
     description:
-      "Custom AI assistants, chatbots, workflow automation, document intelligence, and AI-powered business tools.",
+      "AI assistants, chatbots, workflow automation, document intelligence, and custom AI tools for business operations.",
     icon: Bot,
     accent: "from-cyan-300 to-blue-500",
   },
   {
     title: "Shopify Development",
     description:
-      "Conversion-focused Shopify stores with custom sections, product pages, checkout optimization, and responsive design.",
+      "Premium ecommerce stores designed for product discovery, mobile shopping, checkout flow, and conversions.",
     icon: Store,
     accent: "from-emerald-300 to-cyan-500",
   },
   {
     title: "WordPress Development",
     description:
-      "Business websites, blogs, landing pages, CMS-powered websites, and custom WordPress solutions.",
+      "Professional business websites, blogs, CMS pages, landing pages, and SEO-ready WordPress experiences.",
     icon: Globe2,
     accent: "from-sky-300 to-violet-400",
   },
@@ -148,14 +135,14 @@ export const services: Service[] = [
   {
     title: "React.js Development",
     description:
-      "Modern interactive frontend applications with reusable components and smooth user experiences.",
+      "Interactive frontend applications with reusable components, smooth UI, and scalable architecture.",
     icon: Code2,
     accent: "from-blue-300 to-indigo-500",
   },
   {
     title: "Next.js Development",
     description:
-      "SEO-friendly, high-performance websites and web apps with modern routing, optimization, and production-ready architecture.",
+      "SEO-friendly, fast, production-ready websites and applications with modern routing and optimization.",
     icon: Rocket,
     accent: "from-violet-300 to-cyan-400",
   },
@@ -169,21 +156,21 @@ export const services: Service[] = [
   {
     title: "Java Full Stack",
     description:
-      "Enterprise-grade full-stack applications using Java backend technologies and modern frontend interfaces.",
+      "Enterprise-grade full-stack platforms with strong backend systems and modern frontend experiences.",
     icon: Layers3,
     accent: "from-orange-200 to-violet-400",
   },
   {
     title: "Data Science",
     description:
-      "Data analysis, dashboards, insights, reporting systems, and business intelligence solutions.",
+      "Dashboards, data analysis, reports, business insights, and decision-support systems.",
     icon: LineChart,
     accent: "from-cyan-300 to-emerald-400",
   },
   {
     title: "Machine Learning",
     description:
-      "ML models, prediction systems, recommendation engines, classification, automation, and intelligent data products.",
+      "Prediction systems, recommendation engines, classification models, and intelligent data products.",
     icon: BrainCircuit,
     accent: "from-fuchsia-300 to-blue-500",
   },
@@ -201,32 +188,32 @@ export type ShowcaseStory = {
 export const showcaseStories: ShowcaseStory[] = [
   {
     eyebrow: "Ecommerce Transformation",
-    title: "From idea to revenue-ready Shopify store.",
+    title: "From Store Idea to Premium Ecommerce Experience.",
     story:
-      "We build ecommerce experiences that look premium, load fast, and guide customers from product discovery to checkout.",
+      "We transform product ideas into conversion-ready Shopify stores with clean design, mobile-first layouts, and optimized purchase flows.",
     description:
       "Wireframes become product storytelling, trust-led layouts, responsive sections, and checkout-focused conversion paths.",
-    framePath: "public/frames/shopify/frame_0001.jpg",
+    framePath: "public/frames/ecommerce/frame_0001.jpg",
     visual: "commerce",
   },
   {
     eyebrow: "AI Product Transformation",
-    title: "From manual workflow to AI-powered automation.",
+    title: "From Manual Workflows to AI Automation.",
     story:
-      "We create GenAI tools that automate repetitive work, answer questions, process documents, and help teams move faster.",
+      "We build GenAI tools that answer questions, process documents, automate tasks, and help teams save time.",
     description:
       "Documents, messages, and repeated tasks become a useful assistant with automations, analytics, and clear handoffs.",
-    framePath: "public/frames/ai/frame_0001.jpg",
+    framePath: "public/frames/ai-automation/frame_0001.jpg",
     visual: "ai",
   },
   {
     eyebrow: "Data & Full-Stack Transformation",
-    title: "From raw data to intelligent business platform.",
+    title: "From Raw Data to Intelligent Platforms.",
     story:
-      "We combine frontend, backend, data science, and machine learning to build useful digital products.",
+      "We connect frontend, backend, data science, and machine learning to create useful business applications.",
     description:
       "Disconnected data sources become dashboards, APIs, predictions, and decision-ready business interfaces.",
-    framePath: "public/frames/data/frame_0001.jpg",
+    framePath: "public/frames/data-platform/frame_0001.jpg",
     visual: "data",
   },
 ];
@@ -319,14 +306,14 @@ export const processSteps = [
 ];
 
 export const whyPoints = [
-  "Modern UI and premium frontend design",
-  "Full-stack development capability",
-  "AI, data, and automation expertise",
-  "Ecommerce and business website experience",
+  "Premium frontend design",
+  "Full-stack engineering",
+  "AI and data capability",
+  "Ecommerce and business website expertise",
   "Scalable technology choices",
   "Clear communication",
-  "India-based delivery with global quality",
-  "Flexible for startups, agencies, creators, and businesses",
+  "India-based cost advantage",
+  "Suitable for startups, agencies, creators, and businesses",
 ];
 
 export const packages = [

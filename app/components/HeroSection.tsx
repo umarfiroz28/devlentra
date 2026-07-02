@@ -1,10 +1,74 @@
 "use client";
 
-import { ArrowRight, PlayCircle } from "lucide-react";
-import { motion, useReducedMotion } from "framer-motion";
+import { ArrowRight, ChevronRight } from "lucide-react";
+import { motion, useMotionValue, useReducedMotion, useSpring, useTransform } from "framer-motion";
 import { AnimatedBadge } from "./AnimatedBadge";
+import { DeviceMockup } from "./DeviceMockup";
 import { FloatingCard } from "./FloatingCard";
+import { GradientBlob } from "./GradientBlob";
 import { floatingCards, trustBadges } from "../data/site";
+
+function Hero3DVisual() {
+  const prefersReducedMotion = useReducedMotion();
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+  const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [7, -7]), {
+    stiffness: 110,
+    damping: 18,
+  });
+  const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-10, 10]), {
+    stiffness: 110,
+    damping: 18,
+  });
+
+  return (
+    <div
+      className="surface-3d relative mx-auto min-h-[560px] w-full max-w-[680px]"
+      onMouseMove={(event) => {
+        const rect = event.currentTarget.getBoundingClientRect();
+        mouseX.set((event.clientX - rect.left) / rect.width - 0.5);
+        mouseY.set((event.clientY - rect.top) / rect.height - 0.5);
+      }}
+      onMouseLeave={() => {
+        mouseX.set(0);
+        mouseY.set(0);
+      }}
+    >
+      <GradientBlob className="-left-10 top-8 h-72 w-72 opacity-90" />
+      <GradientBlob className="bottom-6 right-0 h-80 w-80 opacity-80" />
+      <motion.div
+        initial={prefersReducedMotion ? false : { opacity: 0, y: 38, rotateX: 10 }}
+        animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0, rotateX: 0 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        style={prefersReducedMotion ? undefined : { rotateX, rotateY }}
+        className="absolute left-1/2 top-20 w-[84%] -translate-x-1/2"
+      >
+        <DeviceMockup />
+      </motion.div>
+      <div className="absolute inset-0">
+        {floatingCards.map((item, index) => {
+          const positions = [
+            "left-0 top-10 w-56",
+            "right-2 top-4 w-56",
+            "left-6 bottom-28 w-60",
+            "right-0 bottom-36 w-56",
+            "left-20 top-[47%] w-52",
+            "right-20 bottom-8 w-56",
+          ];
+          return (
+            <div
+              key={item.title}
+              className={`absolute hidden sm:block ${positions[index]}`}
+              style={{ transform: `translateZ(${60 + index * 18}px)` }}
+            >
+              <FloatingCard item={item} index={index} />
+            </div>
+          );
+        })}
+      </div>
+    </div>
+  );
+}
 
 export function HeroSection() {
   const prefersReducedMotion = useReducedMotion();
@@ -12,81 +76,62 @@ export function HeroSection() {
   return (
     <section
       id="home"
-      className="relative isolate overflow-hidden px-4 pb-16 pt-28 sm:px-6 sm:pb-20 sm:pt-32 lg:px-8"
+      className="relative isolate overflow-hidden px-4 pb-16 pt-28 sm:px-6 sm:pb-24 sm:pt-32 lg:px-8"
     >
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(circle_at_22%_18%,rgba(56,189,248,0.16),transparent_28%),radial-gradient(circle_at_80%_18%,rgba(139,92,246,0.18),transparent_30%),linear-gradient(180deg,#020617_0%,#050816_56%,#030712_100%)]" />
-      <div className="absolute inset-x-0 top-16 -z-10 h-px bg-gradient-to-r from-transparent via-cyan-300/50 to-transparent" />
-      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[1.02fr_0.98fr]">
+      <div className="absolute inset-0 -z-10 bg-[linear-gradient(180deg,#FFFFFF_0%,#F5F5F7_58%,#FFFFFF_100%)]" />
+      <GradientBlob className="left-[8%] top-24 h-80 w-80 opacity-70" />
+      <GradientBlob className="right-[4%] top-28 h-96 w-96 opacity-80" />
+      <div className="mx-auto grid max-w-7xl items-center gap-12 lg:grid-cols-[0.94fr_1.06fr]">
         <motion.div
-          initial={prefersReducedMotion ? false : { opacity: 0, y: 22 }}
+          initial={prefersReducedMotion ? false : { opacity: 0, y: 24 }}
           animate={prefersReducedMotion ? undefined : { opacity: 1, y: 0 }}
           transition={{ duration: 0.65, ease: "easeOut" }}
-          className="max-w-3xl"
+          className="relative z-10 max-w-3xl"
         >
-          <p className="inline-flex rounded-full border border-cyan-300/20 bg-cyan-300/10 px-4 py-2 text-sm font-medium text-cyan-100">
-            India-based technology team for global-quality delivery
+          <p className="inline-flex rounded-full border border-[#D2D2D7] bg-white/75 px-4 py-2 text-sm font-medium text-[#6E6E73] shadow-sm backdrop-blur">
+            India-based team. Global-quality delivery.
           </p>
-          <h1 className="mt-7 text-4xl font-semibold leading-[1.04] text-white sm:text-5xl lg:text-6xl">
-            Premium Websites, AI Solutions & Full-Stack Products for Modern Businesses.
+          <h1 className="text-balance mt-7 text-[42px] font-semibold leading-[0.98] tracking-[-0.035em] text-[#1D1D1F] sm:text-[58px] lg:text-[82px]">
+            Premium Websites, AI Tools & Full-Stack Products.
           </h1>
-          <p className="mt-6 max-w-2xl text-base leading-8 text-slate-300 sm:text-lg">
-            We design and build high-performing websites, ecommerce stores, AI-powered tools,
-            data products, and full-stack applications for Indian and global clients.
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#6E6E73] sm:text-xl">
+            We build high-performing websites, ecommerce stores, AI automations,
+            dashboards, and full-stack applications for Indian and global businesses.
           </p>
-          <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+          <div className="mt-9 flex flex-col gap-3 sm:flex-row">
             <a
               href="#contact"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-400 px-6 py-3 text-sm font-bold text-slate-950 shadow-[0_18px_60px_rgba(59,130,246,0.28)] transition hover:scale-[1.02] focus:outline-none focus:ring-2 focus:ring-cyan-200 focus:ring-offset-2 focus:ring-offset-slate-950"
+              aria-label="Start a project with YourTech Studio"
+              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0071E3] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_16px_36px_rgba(0,113,227,0.22)] transition hover:bg-[#0077ED] focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
             >
               Start a Project
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
             </a>
             <a
               href="#services"
-              className="inline-flex items-center justify-center gap-2 rounded-full border border-white/15 bg-white/[0.04] px-6 py-3 text-sm font-semibold text-white transition hover:border-cyan-200/60 hover:bg-white/[0.08] focus:outline-none focus:ring-2 focus:ring-cyan-200 focus:ring-offset-2 focus:ring-offset-slate-950"
+              aria-label="Explore technology services"
+              className="inline-flex items-center justify-center gap-1 rounded-full border border-[#D2D2D7] bg-white px-7 py-3.5 text-sm font-semibold text-[#1D1D1F] transition hover:bg-[#F5F5F7] focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
             >
-              <PlayCircle className="h-4 w-4" aria-hidden="true" />
-              View Services
+              Explore Services
+              <ChevronRight className="h-4 w-4" aria-hidden="true" />
             </a>
           </div>
-          <div className="mt-10 grid grid-cols-3 gap-4 border-y border-white/10 py-6 sm:max-w-xl">
+          <div className="mt-10 grid grid-cols-3 gap-4 border-y border-[#E8E8ED] py-6 sm:max-w-xl">
             {[
-              ["12+", "service lines"],
-              ["India", "global clients"],
-              ["Fast", "prototype-ready"],
+              ["10", "core services"],
+              ["Global", "delivery mindset"],
+              ["Fast", "business outcomes"],
             ].map(([value, label]) => (
               <div key={label}>
-                <div className="text-2xl font-semibold text-white">{value}</div>
-                <div className="mt-1 text-xs text-slate-400">{label}</div>
+                <div className="text-2xl font-semibold tracking-tight text-[#1D1D1F]">
+                  {value}
+                </div>
+                <div className="mt-1 text-xs font-medium text-[#86868B]">{label}</div>
               </div>
             ))}
           </div>
         </motion.div>
-
-        <div className="relative min-h-[540px] lg:min-h-[620px]" aria-label="Technology service cards">
-          <div className="absolute inset-0 bg-[radial-gradient(circle_at_48%_42%,rgba(34,211,238,0.18),transparent_34%),radial-gradient(circle_at_68%_70%,rgba(167,139,250,0.16),transparent_30%)]" />
-          <div className="absolute left-6 right-6 top-6 rounded-lg border border-white/10 bg-slate-950/80 p-4">
-            <div className="mb-4 flex items-center justify-between">
-              <span className="text-xs font-medium text-slate-400">Delivery OS</span>
-              <span className="rounded-full bg-emerald-400/15 px-3 py-1 text-xs font-medium text-emerald-200">
-                Live pipeline
-              </span>
-            </div>
-            <div className="h-2 rounded-full bg-white/10">
-              <motion.div
-                className="h-2 rounded-full bg-gradient-to-r from-cyan-300 via-blue-400 to-violet-400"
-                initial={prefersReducedMotion ? false : { width: "20%" }}
-                animate={prefersReducedMotion ? undefined : { width: ["20%", "78%", "54%"] }}
-                transition={{ duration: 5, repeat: Infinity, repeatType: "mirror" }}
-              />
-            </div>
-          </div>
-          <div className="relative grid h-full gap-4 px-5 pb-6 pt-28 sm:grid-cols-2">
-            {floatingCards.map((item, index) => (
-              <FloatingCard key={item.title} item={item} index={index} />
-            ))}
-          </div>
-        </div>
+        <Hero3DVisual />
       </div>
 
       <div className="mx-auto mt-12 flex max-w-7xl flex-wrap gap-3">

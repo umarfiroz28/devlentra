@@ -3,31 +3,30 @@ import { SectionHeading } from "./SectionHeading";
 
 export function AboutSection() {
   return (
-    <section id="about" className="px-4 py-20 sm:px-6 lg:px-8">
+    <section id="about" className="bg-white px-4 py-24 sm:px-6 lg:px-8">
       <div className="mx-auto max-w-7xl">
-        <div className="grid gap-10 lg:grid-cols-[0.9fr_1.1fr] lg:items-start">
+        <div className="grid gap-12 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
           <div>
             <SectionHeading
               eyebrow="About"
-              title="Built by a Practical Tech Team"
+              title="Built by a Practical Tech Team."
               description="We are a growing technology team helping businesses build modern websites, AI tools, ecommerce platforms, dashboards, and full-stack applications. Our focus is simple: clean design, strong engineering, and business outcomes."
             />
-            <p className="mt-6 rounded-lg border border-white/10 bg-white/[0.04] p-4 text-sm leading-7 text-slate-400">
+            <p className="mt-7 rounded-[24px] border border-[#D2D2D7] bg-[#F5F5F7] p-5 text-sm leading-7 text-[#6E6E73]">
               Team details are placeholders and can be replaced with real qualifications,
               bios, photos, and delivery roles later.
             </p>
           </div>
-          <div className="grid gap-4 sm:grid-cols-2">
+          <div className="grid gap-5 sm:grid-cols-2">
             {teamRoles.map((role, index) => (
-              <article
-                key={role}
-                className="rounded-lg border border-white/10 bg-white/[0.045] p-5"
-              >
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-gradient-to-br from-cyan-300 to-violet-400 text-sm font-bold text-slate-950">
+              <article key={role} className="apple-card rounded-[30px] p-6">
+                <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-[linear-gradient(135deg,#EAF3FF,#F4ECFF,#ECFEFF)] text-sm font-bold text-[#0071E3]">
                   {String(index + 1).padStart(2, "0")}
                 </div>
-                <h3 className="mt-5 text-lg font-semibold text-white">{role}</h3>
-                <p className="mt-3 text-sm leading-7 text-slate-400">
+                <h3 className="mt-6 text-xl font-semibold tracking-[-0.02em] text-[#1D1D1F]">
+                  {role}
+                </h3>
+                <p className="mt-3 text-sm leading-7 text-[#6E6E73]">
                   Placeholder profile ready for real experience, ownership, and project
                   responsibilities.
                 </p>
