@@ -28,14 +28,14 @@ export function ProcessSection() {
                 className="apple-card relative rounded-[30px] p-6"
               >
                 <div className="flex items-center justify-between">
-                  <span className="text-5xl font-semibold tracking-[-0.05em] text-[#D2D2D7]">
+                  <span className="text-5xl font-semibold text-[#D2D2D7]">
                     {String(index + 1).padStart(2, "0")}
                   </span>
                   <span className="flex h-11 w-11 items-center justify-center rounded-2xl bg-[#EAF3FF] text-[#0071E3]">
                     <Icon className="h-5 w-5" aria-hidden="true" />
                   </span>
                 </div>
-                <h3 className="mt-8 text-xl font-semibold tracking-[-0.02em] text-[#1D1D1F]">
+                <h3 className="mt-8 text-xl font-semibold text-[#1D1D1F]">
                   {step.title}
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-[#6E6E73]">{step.description}</p>

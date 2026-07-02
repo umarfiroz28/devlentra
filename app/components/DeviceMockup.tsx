@@ -19,7 +19,7 @@ export function DeviceMockup() {
             <div className="flex items-center justify-between">
               <div>
                 <p className="text-xs font-semibold text-[#0071E3]">Product system</p>
-                <h3 className="mt-2 text-2xl font-semibold tracking-tight text-[#1D1D1F]">
+                <h3 className="mt-2 text-2xl font-semibold text-[#1D1D1F]">
                   AI + commerce pipeline
                 </h3>
               </div>

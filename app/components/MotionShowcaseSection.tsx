@@ -92,7 +92,7 @@ function StoryVisual({ story }: { story: ShowcaseStory }) {
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-xs font-semibold text-[#0071E3]">{story.eyebrow}</p>
-                  <p className="mt-1 text-xl font-semibold tracking-[-0.02em] text-[#1D1D1F]">
+                  <p className="mt-1 text-xl font-semibold text-[#1D1D1F]">
                     Product-ready flow
                   </p>
                 </div>
@@ -143,7 +143,7 @@ function MotionStory({ story }: { story: ShowcaseStory }) {
     <article className="grid gap-9 py-20 lg:grid-cols-[0.82fr_1.18fr] lg:items-center">
       <div className="lg:sticky lg:top-28">
         <p className="text-sm font-semibold text-[#0071E3]">{story.eyebrow}</p>
-        <h3 className="text-balance mt-3 text-[32px] font-semibold leading-[1.04] tracking-[-0.03em] text-[#1D1D1F] sm:text-[44px]">
+        <h3 className="apple-title text-balance mt-3 text-[34px] sm:text-[48px]">
           {story.title}
         </h3>
         <p className="mt-5 text-lg leading-8 text-[#6E6E73]">{story.story}</p>

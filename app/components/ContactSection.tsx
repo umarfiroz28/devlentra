@@ -21,14 +21,14 @@ export function ContactSection() {
             <div className="mt-9 flex flex-col gap-3 sm:flex-row">
               <a
                 href="#contact-form"
-                className="inline-flex items-center justify-center gap-2 rounded-full bg-[#1D1D1F] px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-black focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
+                className="apple-btn apple-btn-dark focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
               >
                 Start a Project
                 <ArrowRight className="h-4 w-4" aria-hidden="true" />
               </a>
               <a
                 href="#contact-form"
-                className="inline-flex items-center justify-center rounded-full border border-[#D2D2D7] bg-white px-7 py-3.5 text-sm font-semibold text-[#1D1D1F] transition hover:bg-[#F5F5F7] focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
+                className="apple-btn apple-btn-secondary focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
               >
                 Book a Free Consultation
               </a>
@@ -110,7 +110,7 @@ export function ContactSection() {
             <button
               type="submit"
               aria-label="Submit project inquiry"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0071E3] px-7 py-4 text-sm font-semibold text-white shadow-[0_16px_36px_rgba(0,113,227,0.2)] transition hover:bg-[#0077ED] focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-white"
+              className="apple-btn apple-btn-primary py-4 focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-white"
             >
               Submit Inquiry
               <ArrowRight className="h-4 w-4" aria-hidden="true" />

@@ -23,7 +23,7 @@ export function AboutSection() {
                 <div className="flex h-14 w-14 items-center justify-center rounded-3xl bg-[linear-gradient(135deg,#EAF3FF,#F4ECFF,#ECFEFF)] text-sm font-bold text-[#0071E3]">
                   {String(index + 1).padStart(2, "0")}
                 </div>
-                <h3 className="mt-6 text-xl font-semibold tracking-[-0.02em] text-[#1D1D1F]">
+                <h3 className="mt-6 text-xl font-semibold text-[#1D1D1F]">
                   {role}
                 </h3>
                 <p className="mt-3 text-sm leading-7 text-[#6E6E73]">

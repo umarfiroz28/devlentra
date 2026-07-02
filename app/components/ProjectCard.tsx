@@ -53,7 +53,7 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
             </span>
           ))}
         </div>
-        <h3 className="mt-5 text-2xl font-semibold tracking-[-0.02em] text-[#1D1D1F]">
+        <h3 className="mt-5 text-2xl font-semibold text-[#1D1D1F]">
           {project.title}
         </h3>
         <p className="mt-3 text-sm leading-7 text-[#6E6E73]">{project.description}</p>

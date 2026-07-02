@@ -27,7 +27,7 @@ export function Header() {
         </div>
         <a
           href="#contact"
-          className="inline-flex items-center gap-2 rounded-full bg-[#1D1D1F] px-4 py-2 text-sm font-semibold text-white shadow-[0_12px_30px_rgba(29,29,31,0.16)] transition hover:bg-black focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
+          className="apple-btn apple-btn-dark min-h-10 px-5 py-2 text-[14px] focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
         >
           <span className="hidden sm:inline">Start a Project</span>
           <span className="sm:hidden">Start</span>

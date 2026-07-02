@@ -26,7 +26,7 @@ export function PackagesSection() {
                 </span>
               ) : null}
               <p className="text-sm font-semibold text-[#0071E3]">Custom Quote</p>
-              <h3 className="mt-4 text-2xl font-semibold tracking-[-0.02em] text-[#1D1D1F]">
+              <h3 className="mt-4 text-2xl font-semibold text-[#1D1D1F]">
                 {item.title}
               </h3>
               <p className="mt-3 text-sm leading-7 text-[#6E6E73]">Best for: {item.bestFor}</p>
@@ -40,7 +40,7 @@ export function PackagesSection() {
               </ul>
               <a
                 href="#contact"
-                className="mt-8 inline-flex w-full items-center justify-center rounded-full bg-[#0071E3] px-5 py-3 text-sm font-semibold text-white shadow-[0_14px_30px_rgba(0,113,227,0.18)] transition hover:bg-[#0077ED] focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
+                className="apple-btn apple-btn-primary mt-8 w-full focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
               >
                 Request Quote
               </a>

@@ -3,6 +3,13 @@
 :root {
   --background: #f5f5f7;
   --foreground: #1d1d1f;
+  --apple-blue: #0071e3;
+  --apple-blue-hover: #0077ed;
+  --apple-text: #1d1d1f;
+  --apple-secondary: #6e6e73;
+  --apple-muted: #86868b;
+  --apple-border: #d2d2d7;
+  --apple-divider: #e8e8ed;
 }
 
 @theme inline {
@@ -18,6 +25,13 @@ body {
   font-family:
     -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter,
     "Segoe UI", sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.47059;
+  letter-spacing: 0;
+  font-synthesis: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   text-rendering: geometricPrecision;
 }
 
@@ -34,6 +48,101 @@ html {
   border: 1px solid rgba(210, 210, 215, 0.78);
   background: rgba(255, 255, 255, 0.9);
   box-shadow: 0 24px 70px rgba(29, 29, 31, 0.08);
+}
+
+.apple-display {
+  color: var(--apple-text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter,
+    "Segoe UI", sans-serif;
+  font-weight: 700;
+  line-height: 1.035;
+  letter-spacing: 0;
+}
+
+.apple-title {
+  color: var(--apple-text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, "SF Pro Display", "SF Pro Text", Inter,
+    "Segoe UI", sans-serif;
+  font-weight: 650;
+  line-height: 1.08;
+  letter-spacing: 0;
+}
+
+.apple-body {
+  color: var(--apple-secondary);
+  font-size: 19px;
+  line-height: 1.4211;
+  letter-spacing: 0;
+}
+
+.apple-btn {
+  display: inline-flex;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 999px;
+  padding: 12px 24px;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.17648;
+  letter-spacing: 0;
+  transition:
+    background-color 180ms ease,
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    transform 180ms ease;
+}
+
+.apple-btn:hover {
+  transform: translateY(-1px);
+}
+
+.apple-btn-primary {
+  background: var(--apple-blue);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(0, 113, 227, 0.22);
+}
+
+.apple-btn-primary:hover {
+  background: var(--apple-blue-hover);
+  box-shadow: 0 16px 34px rgba(0, 113, 227, 0.26);
+}
+
+.apple-btn-secondary {
+  border: 1px solid var(--apple-border);
+  background: rgba(255, 255, 255, 0.78);
+  color: var(--apple-blue);
+  backdrop-filter: blur(18px);
+}
+
+.apple-btn-secondary:hover {
+  background: #fff;
+  border-color: rgba(0, 113, 227, 0.28);
+}
+
+.apple-btn-dark {
+  background: var(--apple-text);
+  color: #fff;
+  box-shadow: 0 12px 28px rgba(29, 29, 31, 0.18);
+}
+
+.apple-btn-dark:hover {
+  background: #000;
+}
+
+.apple-link {
+  color: var(--apple-blue);
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.23536;
+  letter-spacing: 0;
+}
+
+.apple-link:hover {
+  color: var(--apple-blue-hover);
 }
 
 .surface-3d {

@@ -91,10 +91,10 @@ export function HeroSection() {
           <p className="inline-flex rounded-full border border-[#D2D2D7] bg-white/75 px-4 py-2 text-sm font-medium text-[#6E6E73] shadow-sm backdrop-blur">
             India-based team. Global-quality delivery.
           </p>
-          <h1 className="text-balance mt-7 text-[42px] font-semibold leading-[0.98] tracking-[-0.035em] text-[#1D1D1F] sm:text-[58px] lg:text-[82px]">
+          <h1 className="apple-display text-balance mt-7 text-[44px] sm:text-[64px] lg:text-[88px]">
             Premium Websites, AI Tools & Full-Stack Products.
           </h1>
-          <p className="mt-6 max-w-2xl text-lg leading-8 text-[#6E6E73] sm:text-xl">
+          <p className="apple-body mt-6 max-w-2xl">
             We build high-performing websites, ecommerce stores, AI automations,
             dashboards, and full-stack applications for Indian and global businesses.
           </p>
@@ -102,7 +102,7 @@ export function HeroSection() {
             <a
               href="#contact"
               aria-label="Start a project with YourTech Studio"
-              className="inline-flex items-center justify-center gap-2 rounded-full bg-[#0071E3] px-7 py-3.5 text-sm font-semibold text-white shadow-[0_16px_36px_rgba(0,113,227,0.22)] transition hover:bg-[#0077ED] focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
+              className="apple-btn apple-btn-primary focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
             >
               Start a Project
               <ArrowRight className="h-4 w-4" aria-hidden="true" />
@@ -110,7 +110,7 @@ export function HeroSection() {
             <a
               href="#services"
               aria-label="Explore technology services"
-              className="inline-flex items-center justify-center gap-1 rounded-full border border-[#D2D2D7] bg-white px-7 py-3.5 text-sm font-semibold text-[#1D1D1F] transition hover:bg-[#F5F5F7] focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
+              className="apple-btn apple-btn-secondary focus:outline-none focus:ring-2 focus:ring-[#0071E3] focus:ring-offset-2 focus:ring-offset-[#F5F5F7]"
             >
               Explore Services
               <ChevronRight className="h-4 w-4" aria-hidden="true" />
@@ -123,7 +123,7 @@ export function HeroSection() {
               ["Fast", "business outcomes"],
             ].map(([value, label]) => (
               <div key={label}>
-                <div className="text-2xl font-semibold tracking-tight text-[#1D1D1F]">
+                <div className="text-2xl font-semibold text-[#1D1D1F]">
                   {value}
                 </div>
                 <div className="mt-1 text-xs font-medium text-[#86868B]">{label}</div>

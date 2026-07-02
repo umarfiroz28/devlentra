@@ -28,7 +28,7 @@ export function ServiceCard({ service, index }: ServiceCardProps) {
       >
         <Icon className="h-6 w-6" aria-hidden="true" />
       </div>
-      <h3 className="mt-8 text-2xl font-semibold tracking-[-0.02em] text-[#1D1D1F]">
+      <h3 className="mt-8 text-2xl font-semibold text-[#1D1D1F]">
         {service.title}
       </h3>
       <p className="mt-4 text-[15px] leading-7 text-[#6E6E73]">{service.description}</p>
