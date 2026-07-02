@@ -6,7 +6,7 @@ export function ServicesSection() {
     <section
       id="services"
       aria-labelledby="services-title"
-      className="bg-[#F5F5F7] px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
+      className="bg-[#F5F5F7] px-4 py-14 sm:px-6 sm:py-16 lg:px-8"
     >
       <div className="apple-wide-container">
         <div className="mx-auto max-w-[920px] text-center">
@@ -20,13 +20,12 @@ export function ServicesSection() {
             full-stack builds are scoped honestly after a quick discussion.
           </p>
         </div>
-        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="mt-9 grid gap-4 lg:grid-cols-2">
           {services.map((service, index) => (
             <ServiceTile
               key={service.title}
               service={service}
               index={index}
-              featured={index < 2}
             />
           ))}
         </div>
