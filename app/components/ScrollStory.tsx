@@ -7,6 +7,8 @@ export type ScrollStoryItem = {
   title: string;
   description: string;
   visual: "ecommerce" | "ai" | "data";
+  imageSrc: string;
+  imageAlt: string;
 };
 
 type ScrollStoryProps = {
@@ -18,6 +20,12 @@ const visualBars = {
   ecommerce: [36, 58, 82, 64, 74],
   ai: [72, 44, 88, 56, 92],
   data: [46, 78, 66, 94, 84],
+};
+
+const visualAccent = {
+  ecommerce: "from-[#EAF3FF] via-[#ECFEFF] to-[#FFF7EA]",
+  ai: "from-[#F4ECFF] via-[#EAF3FF] to-[#ECFEFF]",
+  data: "from-[#ECFEFF] via-[#EAFBF2] to-[#F4ECFF]",
 };
 
 export function ScrollStory({ story, index }: ScrollStoryProps) {
@@ -39,28 +47,28 @@ export function ScrollStory({ story, index }: ScrollStoryProps) {
           {story.description}
         </p>
       </div>
-      <div className="relative min-h-[300px] overflow-hidden rounded-[28px] bg-[#F5F5F7] p-5">
-        {/* Future frames: public/frames/ecommerce/ */}
-        {/* Future frames: public/frames/ai-automation/ */}
-        {/* Future frames: public/frames/data-platform/ */}
-        <div className="rounded-[24px] bg-white p-5 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]">
-          <div className="flex items-center justify-between">
-            <span className="h-4 w-28 rounded-full bg-[#E8E8ED]" />
-            <span className="h-7 w-20 rounded-full bg-[#EAF3FF]" />
-          </div>
-          <div className="mt-6 grid grid-cols-3 gap-3">
-            {[1, 2, 3].map((item) => (
-              <span key={item} className="h-20 rounded-[18px] bg-[#F5F5F7]" />
-            ))}
-          </div>
-          <div className="mt-6 flex h-32 items-end gap-3 rounded-[22px] bg-[linear-gradient(135deg,#FBFBFD,#EAF3FF)] p-4">
-            {visualBars[story.visual].map((height, barIndex) => (
-              <span
-                key={`${story.visual}-${barIndex}`}
-                className="flex-1 rounded-t-2xl bg-[#0071E3]"
-                style={{ height: `${height}%`, opacity: 0.42 + barIndex * 0.09 }}
-              />
-            ))}
+      <div className={`relative min-h-[300px] overflow-hidden rounded-[28px] bg-gradient-to-br ${visualAccent[story.visual]} p-4 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)] sm:p-5`}>
+        <div className="absolute inset-x-8 top-8 h-28 rounded-full bg-white/50 blur-3xl" />
+        <div className="relative h-full min-h-[300px] overflow-hidden rounded-[24px] bg-white shadow-[0_26px_70px_rgba(29,29,31,0.13),inset_0_0_0_1px_rgba(0,0,0,0.06)]">
+          <div
+            role="img"
+            aria-label={story.imageAlt}
+            className="absolute inset-0 bg-cover bg-center"
+            style={{ backgroundImage: `url(${story.imageSrc})` }}
+          />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/88 via-white/26 to-transparent" />
+          <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4">
+            <div className="rounded-[18px] bg-white/82 px-3 py-2 shadow-[0_14px_34px_rgba(0,0,0,0.16)] backdrop-blur-xl">
+              <div className="flex h-14 items-end gap-1.5">
+                {visualBars[story.visual].map((height, barIndex) => (
+                  <span
+                    key={`${story.visual}-${barIndex}`}
+                    className="w-4 rounded-t-xl bg-[#0071E3]"
+                    style={{ height: `${height / 2}%`, opacity: 0.38 + barIndex * 0.1 }}
+                  />
+                ))}
+              </div>
+            </div>
           </div>
         </div>
       </div>

@@ -1,6 +1,50 @@
-import { Check } from "lucide-react";
-import { packages } from "../data/packages";
+import {
+  Bot,
+  Code2,
+  Component,
+  CreditCard,
+  DatabaseZap,
+  FileText,
+  Gauge,
+  Globe2,
+  LayoutDashboard,
+  Mail,
+  Palette,
+  Rocket,
+  SearchCheck,
+  ServerCog,
+  ShoppingBag,
+  Smartphone,
+  Store,
+  Tags,
+  Zap,
+  type LucideIcon,
+} from "lucide-react";
+import { packages, type PackageIcon } from "../data/packages";
 import { AppleButton } from "./AppleButton";
+
+const packageIcon: Record<PackageIcon, LucideIcon> = {
+  ai: Bot,
+  api: ServerCog,
+  checkout: CreditCard,
+  cms: Globe2,
+  code: Code2,
+  component: Component,
+  dashboard: LayoutDashboard,
+  data: DatabaseZap,
+  deploy: Rocket,
+  form: Mail,
+  pages: FileText,
+  payment: CreditCard,
+  performance: Gauge,
+  products: ShoppingBag,
+  responsive: Smartphone,
+  seo: SearchCheck,
+  speed: Zap,
+  store: Store,
+  style: Palette,
+  tags: Tags,
+};
 
 export function PricingSection() {
   return (
@@ -21,70 +65,94 @@ export function PricingSection() {
             timelines are quoted after understanding the requirement.
           </p>
         </div>
-        <div className="mt-14 grid gap-5 lg:grid-cols-4">
+        <div className="mt-12 grid auto-rows-fr items-stretch gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {packages.map((item) => (
             <article
               key={item.title}
-              className={`apple-product-tile p-6 ${
-                item.popular ? "bg-[#1D1D1F] text-white shadow-[0_28px_80px_rgba(0,0,0,0.2)]" : ""
+              className={`apple-product-tile h-full p-4 sm:p-5 ${
+                item.popular ? "ring-2 ring-[#0071E3]/20" : ""
               }`}
             >
-              <div className="flex min-h-[410px] flex-col">
-                <div className="flex items-center justify-between gap-4">
-                  <h3
-                    className={`text-[26px] font-bold leading-tight tracking-[-0.035em] ${
-                      item.popular ? "text-white" : "text-[#1D1D1F]"
-                    }`}
-                  >
-                    {item.title}
-                  </h3>
+              <div className="flex h-full min-h-[470px] flex-col">
+                <div
+                  role="img"
+                  aria-label={item.imageAlt}
+                  className="relative h-[112px] overflow-hidden rounded-[22px] bg-[#F5F5F7] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]"
+                >
+                  <div
+                    className="absolute inset-0 bg-cover bg-center"
+                    style={{ backgroundImage: `url(${item.imageSrc})` }}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent" />
                   {item.popular ? (
-                    <span className="rounded-full bg-white px-3 py-1 text-xs font-semibold text-[#1D1D1F]">
+                    <span className="absolute right-3 top-3 rounded-full bg-[#0071E3] px-3 py-1 text-[11px] font-semibold text-white shadow-[0_10px_24px_rgba(0,113,227,0.28)]">
                       Popular
                     </span>
                   ) : null}
                 </div>
+
+                <div className="mt-4">
+                  <h3
+                    className="text-[21px] font-bold leading-tight text-[#1D1D1F]"
+                  >
+                    {item.title}
+                  </h3>
+                </div>
                 <p
-                  className={`mt-5 text-[42px] font-bold leading-none tracking-[-0.05em] ${
-                    item.popular ? "text-white" : "text-[#1D1D1F]"
-                  }`}
+                  className="mt-3 text-[34px] font-bold leading-none text-[#1D1D1F]"
                 >
                   {item.startingAt}
                 </p>
-                <p
-                  className={`mt-2 text-[13px] ${
-                    item.popular ? "text-white/58" : "text-[#86868B]"
-                  }`}
-                >
+                <p className="mt-1 text-[12px] text-[#86868B]">
                   starting price
                 </p>
-                <p
-                  className={`mt-4 text-[15px] leading-6 ${
-                    item.popular ? "text-white/72" : "text-[#6E6E73]"
-                  }`}
-                >
+                <p className="mt-2 min-h-[40px] text-[13px] leading-5 text-[#6E6E73]">
                   {item.bestFor}
                 </p>
-                <ul className="mt-7 grid gap-3">
-                  {item.includes.map((feature) => (
-                    <li key={feature} className="flex gap-3 text-[15px] leading-6">
-                      <Check
-                        className={`mt-1 h-4 w-4 shrink-0 ${
-                          item.popular ? "text-[#7DBBFF]" : "text-[#0071E3]"
-                        }`}
-                        aria-hidden="true"
-                      />
-                      <span className={item.popular ? "text-white/82" : "text-[#1D1D1F]"}>
-                        {feature}
+                <div className="mt-3 flex flex-wrap gap-1.5">
+                  {item.stack.map((stackItem) => {
+                    const StackIcon = packageIcon[stackItem.icon];
+
+                    return (
+                      <span
+                        key={stackItem.label}
+                        className="inline-flex items-center gap-1.5 rounded-full bg-[#F5F5F7] px-2.5 py-1 text-[11px] font-semibold text-[#1D1D1F] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]"
+                      >
+                        <StackIcon
+                          className="h-3.5 w-3.5 text-[#0071E3]"
+                          aria-hidden="true"
+                        />
+                        {stackItem.label}
                       </span>
-                    </li>
-                  ))}
+                    );
+                  })}
+                </div>
+                <ul className="mt-4 grid grid-cols-2 gap-2">
+                  {item.includes.map((feature) => {
+                    const FeatureIcon = packageIcon[feature.icon];
+
+                    return (
+                      <li
+                        key={feature.label}
+                        className="flex h-9 items-center gap-2 rounded-[12px] bg-[#F6FAFF] px-2.5 text-[12px] font-semibold leading-4 text-[#1D1D1F] shadow-[inset_0_0_0_1px_rgba(0,113,227,0.07)]"
+                      >
+                        <span
+                          className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-[#EAF3FF] text-[#0071E3]"
+                        >
+                          <FeatureIcon className="h-3.5 w-3.5" aria-hidden="true" />
+                        </span>
+                        <span className="truncate">
+                          {feature.label}
+                        </span>
+                      </li>
+                    );
+                  })}
                 </ul>
-                <div className="mt-auto pt-8">
+                <div className="mt-auto pt-4">
                   <AppleButton
                     href="#contact"
-                    variant={item.popular ? "primary" : "outline"}
-                    className="w-full"
+                    variant="primary"
+                    className="w-full text-[15px] font-semibold"
                   >
                     Start here
                   </AppleButton>

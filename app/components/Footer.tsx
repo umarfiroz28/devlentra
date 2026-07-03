@@ -66,7 +66,7 @@ export function Footer() {
         </div>
         <div className="flex flex-col gap-2 pt-5 text-[12px] text-[#86868B] sm:flex-row sm:items-center sm:justify-between">
           <p>Copyright 2026 {brand.name}. All rights reserved.</p>
-          <p>Independent studio. No affiliation with Apple Inc.</p>
+          {/* <p>Independent studio. No affiliation with Apple Inc.</p> */}
         </div>
       </div>
     </footer>

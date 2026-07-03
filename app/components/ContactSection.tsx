@@ -1,11 +1,49 @@
-import { ArrowRight, GitBranch, Mail, MapPin, MessageCircle, Network } from "lucide-react";
+"use client";
+
+import { useState, type FormEvent } from "react";
+import {
+  ArrowRight,
+  CheckCircle2,
+  GitBranch,
+  LoaderCircle,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Network,
+} from "lucide-react";
 import { brand, budgetOptions, contactServiceOptions } from "../data/site";
 import { AppleButton } from "./AppleButton";
 
 const inputClass =
   "rounded-[16px] border border-[#D2D2D7] bg-white px-4 py-4 text-[17px] text-[#1D1D1F] outline-none transition placeholder:text-[#86868B] focus:border-[#0071E3] focus:ring-4 focus:ring-[#EAF3FF]";
 
+const inquirySubmitDelayMs = 850;
+
 export function ContactSection() {
+  const [submitState, setSubmitState] = useState<"idle" | "loading" | "success">("idle");
+  const isSubmitting = submitState === "loading";
+
+  async function handleSubmit(event: FormEvent<HTMLFormElement>) {
+    event.preventDefault();
+
+    if (isSubmitting) {
+      return;
+    }
+
+    setSubmitState("loading");
+    await new Promise((resolve) => {
+      window.setTimeout(resolve, inquirySubmitDelayMs);
+    });
+    event.currentTarget.reset();
+    setSubmitState("success");
+  }
+
+  function handleInput() {
+    if (submitState === "success") {
+      setSubmitState("idle");
+    }
+  }
+
   return (
     <section
       id="contact"
@@ -56,27 +94,36 @@ export function ContactSection() {
           </div>
           <form
             id="contact-form"
+            onInput={handleInput}
+            onSubmit={handleSubmit}
             className="apple-card grid gap-5 p-6 sm:p-8"
             aria-label="Project inquiry form"
+            aria-busy={isSubmitting}
           >
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
                 Name
-                <input className={inputClass} name="name" placeholder="Your name" />
+                <input className={inputClass} name="name" placeholder="Your name" required />
               </label>
               <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
                 Email
-                <input className={inputClass} name="email" placeholder="you@example.com" type="email" />
+                <input
+                  className={inputClass}
+                  name="email"
+                  placeholder="you@example.com"
+                  required
+                  type="email"
+                />
               </label>
             </div>
             <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
               Phone / WhatsApp
-              <input className={inputClass} name="phone" placeholder="+91 7310886909" />
+              <input className={inputClass} name="phone" placeholder="+91 7310886909" required />
             </label>
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
                 Service
-                <select className={inputClass} name="service" defaultValue="">
+                <select className={inputClass} name="service" defaultValue="" required>
                   <option value="" disabled>
                     Select a service
                   </option>
@@ -87,7 +134,7 @@ export function ContactSection() {
               </label>
               <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
                 Budget range
-                <select className={inputClass} name="budget" defaultValue="">
+                <select className={inputClass} name="budget" defaultValue="" required>
                   <option value="" disabled>
                     Select budget
                   </option>
@@ -103,16 +150,36 @@ export function ContactSection() {
                 className={`${inputClass} min-h-40 resize-y`}
                 name="message"
                 placeholder="Tell us about the business goal, timeline, and product idea."
+                required
               />
             </label>
             <button
               type="submit"
               aria-label="Submit project inquiry"
-              className="apple-button apple-button-primary apple-focus w-full"
+              className="apple-button apple-button-primary apple-focus w-full disabled:cursor-not-allowed disabled:opacity-70"
+              disabled={isSubmitting}
             >
-              Submit Inquiry
-              <ArrowRight className="h-4 w-4" aria-hidden="true" />
+              {isSubmitting ? (
+                <>
+                  Sending inquiry
+                  <LoaderCircle className="h-4 w-4 animate-spin" aria-hidden="true" />
+                </>
+              ) : (
+                <>
+                  Submit Inquiry
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </>
+              )}
             </button>
+            {submitState === "success" ? (
+              <p
+                className="flex items-start gap-2 rounded-[16px] bg-[#EAF8EF] px-4 py-3 text-[14px] font-medium leading-5 text-[#126B35] shadow-[inset_0_0_0_1px_rgba(18,107,53,0.12)]"
+                role="status"
+              >
+                <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+                Your inquiry was submitted successfully. I will get back to you soon.
+              </p>
+            ) : null}
           </form>
         </div>
       </div>

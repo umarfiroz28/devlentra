@@ -7,6 +7,9 @@ const stories: ScrollStoryItem[] = [
     description:
       "Property listings, location-aware catalogs, product discovery, responsive interfaces, Firebase flows, and business-friendly browsing experiences.",
     visual: "ecommerce",
+    imageSrc: "/images/showcase-commerce-real-estate.png",
+    imageAlt:
+      "Generated product interface showing real-estate listings, map search, and local commerce browsing.",
   },
   {
     eyebrow: "AutoStack / GenAI Assistant",
@@ -14,6 +17,9 @@ const stories: ScrollStoryItem[] = [
     description:
       "LLM workflows, RAG over codebases, support-ticket classification, generated scaffolds, CI/CD templates, and practical automation.",
     visual: "ai",
+    imageSrc: "/images/showcase-ai-automation.png",
+    imageAlt:
+      "Generated AI product interface showing code review, chatbot automation, and workflow panels.",
   },
   {
     eyebrow: "Backend / ML Projects",
@@ -21,6 +27,9 @@ const stories: ScrollStoryItem[] = [
     description:
       "Java Spring Boot services, Kafka workflows, Redis caching, dashboards, wafer fault detection, and cement strength prediction.",
     visual: "data",
+    imageSrc: "/images/showcase-data-ml.png",
+    imageAlt:
+      "Generated data platform interface showing APIs, dashboards, model pipelines, and analytics panels.",
   },
 ];
 

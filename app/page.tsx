@@ -1,5 +1,6 @@
 import { AboutSection } from "./components/AboutSection";
 import { ContactSection } from "./components/ContactSection";
+import { FloatingWhatsApp } from "./components/FloatingWhatsApp";
 import { Footer } from "./components/Footer";
 import { GlobalNav } from "./components/GlobalNav";
 import { HeroSection } from "./components/HeroSection";
@@ -24,6 +25,7 @@ export default function Home() {
         <ContactSection />
       </main>
       <Footer />
+      <FloatingWhatsApp />
     </>
   );
 }
