@@ -9,6 +9,8 @@
     "dev": "vinext dev",
     "dev:preview": "powershell -NoProfile -ExecutionPolicy Bypass -File scripts/dev-next-preview.ps1",
     "build": "vinext build",
+    "build:sites": "vinext build",
+    "build:vercel": "next build",
     "start": "vinext start",
     "lint": "eslint . --ignore-pattern dist --ignore-pattern .next",
     "db:generate": "drizzle-kit generate"
@@ -23,6 +25,7 @@
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "1.37.1",
+    "@cloudflare/workers-types": "^4.20260702.1",
     "@next/swc-wasm-nodejs": "^16.2.6",
     "@tailwindcss/postcss": "4.2.1",
     "@types/node": "22.19.19",

@@ -2,14 +2,21 @@ import type { AnchorHTMLAttributes, ButtonHTMLAttributes, ReactNode } from "reac
 
 type AppleButtonVariant = "primary" | "dark" | "outline" | "link";
 
-type AppleButtonProps = {
+type AppleButtonBaseProps = {
   children: ReactNode;
   className?: string;
   variant?: AppleButtonVariant;
-} & (
-  | ({ href: string } & AnchorHTMLAttributes<HTMLAnchorElement>)
-  | ({ href?: undefined } & ButtonHTMLAttributes<HTMLButtonElement>)
-);
+};
+
+type AppleButtonLinkProps = AppleButtonBaseProps &
+  { href: string } &
+  AnchorHTMLAttributes<HTMLAnchorElement>;
+
+type AppleButtonNativeProps = AppleButtonBaseProps &
+  { href?: never } &
+  ButtonHTMLAttributes<HTMLButtonElement>;
+
+type AppleButtonProps = AppleButtonLinkProps | AppleButtonNativeProps;
 
 const variantClass: Record<AppleButtonVariant, string> = {
   primary: "apple-button apple-button-primary",
@@ -18,24 +25,40 @@ const variantClass: Record<AppleButtonVariant, string> = {
   link: "apple-link-button",
 };
 
-export function AppleButton({
-  children,
-  className = "",
-  variant = "primary",
-  ...props
-}: AppleButtonProps) {
+function isLinkButton(props: AppleButtonProps): props is AppleButtonLinkProps {
+  return typeof props.href === "string";
+}
+
+function getElementProps<T extends AppleButtonBaseProps>(
+  props: T,
+): Omit<T, keyof AppleButtonBaseProps> {
+  const elementProps = { ...props };
+
+  Reflect.deleteProperty(elementProps, "children");
+  Reflect.deleteProperty(elementProps, "className");
+  Reflect.deleteProperty(elementProps, "variant");
+
+  return elementProps as Omit<T, keyof AppleButtonBaseProps>;
+}
+
+export function AppleButton(props: AppleButtonProps) {
+  const { children, className = "", variant = "primary" } = props;
   const classes = `${variantClass[variant]} apple-focus ${className}`.trim();
 
-  if ("href" in props && props.href) {
+  if (isLinkButton(props)) {
+    const anchorProps = getElementProps(props);
+
     return (
-      <a className={classes} {...props}>
+      <a className={classes} {...anchorProps}>
         {children}
       </a>
     );
   }
 
+  const { type = "button", ...buttonProps } = getElementProps(props);
+
   return (
-    <button className={classes} type="button" {...props}>
+    <button className={classes} type={type} {...buttonProps}>
       {children}
     </button>
   );
