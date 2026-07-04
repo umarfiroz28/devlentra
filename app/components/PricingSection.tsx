@@ -46,6 +46,28 @@ const packageIcon: Record<PackageIcon, LucideIcon> = {
   tags: Tags,
 };
 
+function PackageVisual({
+  item,
+}: {
+  item: (typeof packages)[number];
+}) {
+  return (
+    <div
+      role="img"
+      aria-label={item.imageAlt}
+      className="relative h-[112px] overflow-hidden rounded-[22px] bg-[#F5F5F7] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]"
+    >
+      <div className="absolute inset-0 bg-cover bg-center" style={{ backgroundImage: `url(${item.imageSrc})` }} />
+      <div className="absolute inset-0 bg-gradient-to-t from-white/18 to-transparent" />
+      {item.popular ? (
+        <span className="absolute right-3 top-3 rounded-full bg-[#0071E3] px-3 py-1 text-[11px] font-semibold text-white shadow-[0_10px_24px_rgba(0,113,227,0.28)]">
+          Popular
+        </span>
+      ) : null}
+    </div>
+  );
+}
+
 export function PricingSection() {
   return (
     <section
@@ -74,22 +96,7 @@ export function PricingSection() {
               }`}
             >
               <div className="flex h-full min-h-[470px] flex-col">
-                <div
-                  role="img"
-                  aria-label={item.imageAlt}
-                  className="relative h-[112px] overflow-hidden rounded-[22px] bg-[#F5F5F7] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]"
-                >
-                  <div
-                    className="absolute inset-0 bg-cover bg-center"
-                    style={{ backgroundImage: `url(${item.imageSrc})` }}
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-white/20 to-transparent" />
-                  {item.popular ? (
-                    <span className="absolute right-3 top-3 rounded-full bg-[#0071E3] px-3 py-1 text-[11px] font-semibold text-white shadow-[0_10px_24px_rgba(0,113,227,0.28)]">
-                      Popular
-                    </span>
-                  ) : null}
-                </div>
+                <PackageVisual item={item} />
 
                 <div className="mt-4">
                   <h3

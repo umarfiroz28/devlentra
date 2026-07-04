@@ -1,0 +1,198 @@
+{
+  "count": 21,
+  "contact": {
+    "phone": "7310886906",
+    "email": "devlentra@gmail.com"
+  },
+  "assets": [
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-01-wordpress-starter.png",
+      "source_visual": "public/images/ad-campaign/base/ad-01-wordpress-starter.png",
+      "service": "WordPress Starter",
+      "price": "Starts at Rs 1,499",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-02-shopify-starter.png",
+      "source_visual": "public/images/ad-campaign/base/ad-02-shopify-starter.png",
+      "service": "Shopify Store Setup",
+      "price": "Starts at Rs 1,699",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-03-react-next-website.png",
+      "source_visual": "public/images/ad-campaign/base/ad-03-react-next-website.png",
+      "service": "React / Next.js Website",
+      "price": "Starts at Rs 1,799",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-04-portfolio-landing-page.png",
+      "source_visual": "public/images/ad-campaign/base/ad-04-portfolio-landing-page.png",
+      "service": "Portfolio / Landing Page",
+      "price": "Starts at Rs 999",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-05-node-api-development.png",
+      "source_visual": "public/images/ad-campaign/base/ad-05-node-api-development.png",
+      "service": "Node.js API Development",
+      "price": "Starts at Rs 2,499",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-06-java-spring-api.png",
+      "source_visual": "public/images/ad-campaign/base/ad-06-java-spring-api.png",
+      "service": "Java Spring Boot APIs",
+      "price": "Starts at Rs 2,999",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-07-ai-automation-chatbot.png",
+      "source_visual": "public/images/ad-campaign/base/ad-07-ai-automation-chatbot.png",
+      "service": "AI Automation / Chatbots",
+      "price": "Starts at Rs 2,999",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-08-data-dashboard.png",
+      "source_visual": "public/images/ad-campaign/base/ad-08-data-dashboard.png",
+      "service": "Data Dashboards",
+      "price": "Starts at Rs 2,499",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-09-machine-learning-project.png",
+      "source_visual": "public/images/ad-campaign/base/ad-09-machine-learning-project.png",
+      "service": "Machine Learning Projects",
+      "price": "Starts at Rs 3,499",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-10-custom-full-stack-product.png",
+      "source_visual": "public/images/ad-campaign/base/ad-10-custom-full-stack-product.png",
+      "service": "Custom Web Applications",
+      "price": "Starts at Rs 4,999",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-11-html-css-fixes.png",
+      "source_visual": "public/images/ad-campaign/base/ad-11-html-css-fixes.png",
+      "service": "HTML / CSS Fixes",
+      "price": "Starts at Rs 799",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-12-mobile-responsive-redesign.png",
+      "source_visual": "public/images/ad-campaign/base/ad-12-mobile-responsive-redesign.png",
+      "service": "Mobile Responsive Redesign",
+      "price": "Starts at Rs 799",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-13-seo-speed-optimization.png",
+      "source_visual": "public/images/ad-campaign/base/ad-13-seo-speed-optimization.png",
+      "service": "SEO & Speed Cleanup",
+      "price": "Starts at Rs 799",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-14-contact-form-lead-generation.png",
+      "source_visual": "public/images/ad-campaign/base/ad-14-contact-form-lead-generation.png",
+      "service": "Lead Generation Forms",
+      "price": "Starts at Rs 999",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-15-ecommerce-product-catalog.png",
+      "source_visual": "public/images/ad-campaign/base/ad-15-ecommerce-product-catalog.png",
+      "service": "Product Catalog Setup",
+      "price": "Starts at Rs 1,699",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-16-auth-secure-backend.png",
+      "source_visual": "public/images/ad-campaign/base/ad-16-auth-secure-backend.png",
+      "service": "Auth & Secure Backend",
+      "price": "Starts at Rs 2,499",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-17-cloud-deployment-launch.png",
+      "source_visual": "public/images/ad-campaign/base/ad-17-cloud-deployment-launch.png",
+      "service": "Deployment Support",
+      "price": "Starts at Rs 1,799",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-18-admin-dashboard-internal-tool.png",
+      "source_visual": "public/images/ad-campaign/base/ad-18-admin-dashboard-internal-tool.png",
+      "service": "Admin Dashboards",
+      "price": "Starts at Rs 2,499",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-19-startup-launch-package.png",
+      "source_visual": "public/images/ad-campaign/base/ad-19-startup-launch-package.png",
+      "service": "Startup Launch Package",
+      "price": "Starts at Rs 999",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-20-local-business-website.png",
+      "source_visual": "public/images/ad-campaign/base/ad-20-local-business-website.png",
+      "service": "Local Business Website",
+      "price": "Starts at Rs 1,499",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    },
+    {
+      "poster": "public/images/ad-campaign/instagram-posters/ad-21-affordable-starter-pricing.png",
+      "source_visual": "public/images/ad-campaign/base/ad-21-affordable-starter-pricing.png",
+      "service": "Affordable Tech Services",
+      "price": "Starts at Rs 799",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "format": "Instagram square 1080x1080"
+    }
+  ]
+}

@@ -23,7 +23,11 @@ export function ServicesSection() {
             </p>
           </div>
 
-          <div className="relative min-h-[300px] overflow-hidden rounded-[32px] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12),inset_0_0_0_1px_rgba(0,0,0,0.06)] sm:min-h-[340px] lg:min-h-[390px]">
+          <div
+            className="relative min-h-[300px] overflow-hidden rounded-[32px] bg-white shadow-[0_28px_80px_rgba(0,0,0,0.12),inset_0_0_0_1px_rgba(0,0,0,0.06)] sm:min-h-[340px] lg:min-h-[390px]"
+            role="img"
+            aria-label="Lightweight service interface showing web, ecommerce, AI, and analytics panels."
+          >
             <Image
               src="/images/devlentra-services-3d.png"
               alt="3D illustration of web, ecommerce, code, analytics, and chat service panels with rupee coins."

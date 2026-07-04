@@ -14,8 +14,9 @@ export const metadata: Metadata = {
     "AI automation services India",
   ],
   icons: {
-    icon: "/favicon.svg",
-    shortcut: "/favicon.svg",
+    icon: "/images/brand/devlentra-favicon.png",
+    shortcut: "/images/brand/devlentra-favicon.png",
+    apple: "/images/brand/devlentra-favicon.png",
   },
 };
 

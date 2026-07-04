@@ -23,31 +23,31 @@ const panels = [
     title: "GenAI Workflow",
     detail: "RAG, bots, automation",
     icon: Bot,
-    className: "left-0 top-10 w-[230px]",
+    className: "left-3 top-16 w-[210px] xl:left-8 xl:top-[78px]",
   },
   {
     title: "Shopify Store",
     detail: "Starts at Rs 1,699",
     icon: ShoppingBag,
-    className: "right-0 top-6 w-[230px]",
+    className: "right-3 top-20 w-[210px] xl:right-8 xl:top-[76px]",
   },
   {
     title: "Data Insights",
     detail: "Dashboards and ML",
     icon: ChartNoAxesCombined,
-    className: "left-2 bottom-[72px] w-[238px]",
+    className: "left-[52px] bottom-6 w-[218px] xl:left-[78px] xl:bottom-8",
   },
   {
     title: "API Layer",
     detail: "Java, Node, Go",
     icon: Braces,
-    className: "right-3 bottom-20 w-[218px]",
+    className: "right-[34px] bottom-[88px] w-[204px] xl:right-[72px]",
   },
   {
     title: "React Studio",
     detail: "Starts at Rs 1,799",
     icon: Code2,
-    className: "left-1/2 top-0 w-[220px] -translate-x-1/2",
+    className: "left-[255px] top-0 w-[210px] xl:left-[290px]",
   },
 ];
 
@@ -69,7 +69,7 @@ export function HeroProductScene() {
 
   return (
     <div
-      className="surface-3d relative mx-auto h-[430px] w-full max-w-[680px] sm:h-[500px] lg:mx-0 lg:ml-auto lg:h-[560px] lg:max-w-none"
+      className="surface-3d relative mx-auto h-[430px] w-full max-w-[680px] sm:h-[500px] lg:mx-0 lg:ml-auto lg:h-[560px] lg:max-w-[760px]"
       onMouseMove={(event) => {
         const rect = event.currentTarget.getBoundingClientRect();
         pointerX.set((event.clientX - rect.left) / rect.width - 0.5);
@@ -82,21 +82,21 @@ export function HeroProductScene() {
       aria-label="Interactive product scene showing websites, AI, data, APIs, and code"
     >
       <motion.div
-        className="absolute right-8 top-6 hidden h-[72%] w-[78%] rounded-[36px] border border-white/70 bg-white/34 shadow-[0_28px_90px_rgba(0,0,0,0.08)] backdrop-blur-xl lg:block"
+        className="pointer-events-none absolute right-8 top-6 hidden h-[72%] w-[78%] rounded-[36px] border border-white/70 bg-white/54 shadow-[0_28px_90px_rgba(0,0,0,0.08)] lg:block"
         initial={{ opacity: 0, x: 40, rotate: 2 }}
         animate={{ opacity: 1, x: 0, rotate: -3 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         aria-hidden="true"
       />
       <motion.div
-        className="absolute bottom-6 right-0 hidden h-[56%] w-[56%] rounded-[32px] border border-white/70 bg-[#FBFBFD]/70 shadow-[0_20px_70px_rgba(0,0,0,0.07)] backdrop-blur-xl lg:block"
+        className="pointer-events-none absolute bottom-6 right-0 hidden h-[56%] w-[56%] rounded-[32px] border border-white/70 bg-[#FBFBFD]/76 shadow-[0_20px_70px_rgba(0,0,0,0.07)] lg:block"
         initial={{ opacity: 0, x: 30, y: 30, rotate: -4 }}
         animate={{ opacity: 1, x: 0, y: 0, rotate: 4 }}
         transition={{ delay: 0.12, duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
         aria-hidden="true"
       />
       <motion.div
-        className="absolute inset-x-2 top-12 mx-auto h-[330px] max-w-[650px] rounded-[34px] bg-white shadow-[0_34px_110px_rgba(0,0,0,0.18)] ring-1 ring-black/8 sm:top-[70px] sm:h-[390px] lg:inset-x-auto lg:right-8 lg:top-20 lg:h-[390px] lg:w-[580px]"
+        className="absolute inset-x-2 top-12 z-10 mx-auto h-[330px] max-w-[650px] rounded-[34px] bg-white shadow-[0_34px_110px_rgba(0,0,0,0.18)] ring-1 ring-black/8 sm:top-[70px] sm:h-[390px] lg:inset-x-auto lg:right-8 lg:top-20 lg:h-[390px] lg:w-[580px]"
         initial={{ opacity: 0, y: 42, scale: 0.96 }}
         animate={{ opacity: 1, y: 0, scale: 1 }}
         transition={{ duration: 0.9, ease: [0.22, 1, 0.36, 1] }}
@@ -126,9 +126,21 @@ export function HeroProductScene() {
               </span>
             </div>
             {stackRows.map(([item, value], index) => (
-              <div
+              <motion.div
                 key={item}
-                className="mb-3 flex items-center justify-between rounded-2xl bg-[#F5F5F7] px-4 py-3 text-sm text-[#1D1D1F]"
+                className="mb-3 flex items-center justify-between rounded-2xl bg-[#F5F5F7] px-4 py-3 text-sm text-[#1D1D1F] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.04)]"
+                whileHover={
+                  reduceMotion
+                    ? undefined
+                    : {
+                        x: 6,
+                        scale: 1.025,
+                        backgroundColor: "#EAF3FF",
+                        boxShadow:
+                          "0 14px 30px rgba(0,113,227,0.16), inset 0 0 0 1px rgba(0,113,227,0.18)",
+                      }
+                }
+                transition={{ type: "spring", stiffness: 360, damping: 28 }}
               >
                 <span>{item}</span>
                 <span className="h-2 w-12 rounded-full bg-[#0071E3]/[.18]">
@@ -139,7 +151,7 @@ export function HeroProductScene() {
                     transition={{ delay: 0.45 + index * 0.08, duration: 0.9 }}
                   />
                 </span>
-              </div>
+              </motion.div>
             ))}
           </div>
           <div className="relative p-5 sm:p-7">
@@ -159,7 +171,22 @@ export function HeroProductScene() {
               </div>
               <div className="mt-6 grid grid-cols-3 gap-3">
                 {[82, 64, 91].map((value, index) => (
-                  <div key={value} className="rounded-3xl bg-[#F5F5F7] p-4">
+                  <motion.div
+                    key={value}
+                    className="rounded-3xl bg-[#F5F5F7] p-4 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.04)]"
+                    whileHover={
+                      reduceMotion
+                        ? undefined
+                        : {
+                            y: -6,
+                            scale: 1.04,
+                            backgroundColor: "#EAF3FF",
+                            boxShadow:
+                              "0 16px 34px rgba(0,113,227,0.18), inset 0 0 0 1px rgba(0,113,227,0.18)",
+                          }
+                    }
+                    transition={{ type: "spring", stiffness: 340, damping: 26 }}
+                  >
                     <motion.span
                       className="block text-2xl font-bold tracking-[-0.03em] text-[#1D1D1F]"
                       initial={{ opacity: 0, y: 8 }}
@@ -171,7 +198,7 @@ export function HeroProductScene() {
                     <span className="mt-1 block text-xs text-[#6E6E73]">
                       {["React", "AWS", "API"][index]}
                     </span>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
               <div className="mt-6 h-28 rounded-[24px] bg-[linear-gradient(135deg,#F5F5F7,#EAF3FF)] p-4">
@@ -200,7 +227,7 @@ export function HeroProductScene() {
       </motion.div>
 
       <motion.div
-        className="absolute bottom-3 left-4 right-4 rounded-[24px] border border-white/70 bg-white/88 p-3 shadow-[0_22px_70px_rgba(0,0,0,0.14)] backdrop-blur-2xl sm:left-auto sm:right-6 sm:w-[320px] lg:bottom-[54px] lg:right-2"
+        className="absolute bottom-3 left-4 right-4 z-30 rounded-[24px] border border-white/80 bg-white/94 p-3 shadow-[0_22px_70px_rgba(0,0,0,0.14)] sm:left-auto sm:right-6 sm:w-[320px] lg:bottom-2 lg:right-4"
         initial={{ opacity: 0, y: 26 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.55, duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
@@ -222,7 +249,7 @@ export function HeroProductScene() {
       </motion.div>
 
       <motion.div
-        className="absolute left-4 top-[56%] hidden w-[250px] rounded-[22px] border border-white/70 bg-[#1D1D1F] p-4 text-white shadow-[0_24px_70px_rgba(0,0,0,0.2)] md:block lg:left-0"
+        className="absolute left-4 top-[54%] z-20 hidden w-[236px] rounded-[22px] border border-white/70 bg-[#1D1D1F] p-4 text-white shadow-[0_24px_70px_rgba(0,0,0,0.2)] md:block lg:left-0"
         initial={{ opacity: 0, x: -30, rotateY: -10 }}
         animate={{ opacity: 1, x: 0, rotateY: 0 }}
         transition={{ delay: 0.72, duration: 0.72, ease: [0.22, 1, 0.36, 1] }}

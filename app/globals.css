@@ -24,7 +24,7 @@
   --apple-radius-card: 28px;
   --apple-radius-large: 36px;
   --apple-radius-pill: 999px;
-  --apple-nav-height: 44px;
+  --apple-nav-height: 64px;
   --apple-container: 980px;
   --apple-wide-container: 1200px;
   --apple-section-gap: 80px;
@@ -60,6 +60,20 @@ body {
   font-synthesis: none;
 }
 
+#hero {
+  transform-origin: top center;
+  transition:
+    filter 220ms ease,
+    opacity 220ms ease,
+    transform 220ms ease;
+}
+
+body.nav-menu-open #hero {
+  filter: blur(12px);
+  opacity: 0.56;
+  transform: scale(1.012);
+}
+
 ::selection {
   background: rgba(0, 113, 227, 0.18);
   color: var(--apple-text);
@@ -80,7 +94,7 @@ a {
 }
 
 .apple-nav {
-  height: var(--apple-nav-height);
+  min-height: var(--apple-nav-height);
   border-bottom: 1px solid rgba(0, 0, 0, 0.08);
   background: var(--apple-nav-bg);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
@@ -271,6 +285,26 @@ a {
 
 .text-balance {
   text-wrap: balance;
+}
+
+.text-clamp-1,
+.text-clamp-2,
+.text-clamp-3 {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.text-clamp-1 {
+  -webkit-line-clamp: 1;
+}
+
+.text-clamp-2 {
+  -webkit-line-clamp: 2;
+}
+
+.text-clamp-3 {
+  -webkit-line-clamp: 3;
 }
 
 .apple-focus {

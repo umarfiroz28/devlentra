@@ -1,0 +1,219 @@
+{
+  "contact": {
+    "phone": "7310886906",
+    "email": "devlentra@gmail.com"
+  },
+  "count": 21,
+  "assets": [
+    {
+      "base": "public/images/ad-campaign/base/ad-01-wordpress-starter.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-01-wordpress-starter.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-02-shopify-starter.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-02-shopify-starter.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-03-react-next-website.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-03-react-next-website.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-04-portfolio-landing-page.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-04-portfolio-landing-page.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-05-node-api-development.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-05-node-api-development.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-06-java-spring-api.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-06-java-spring-api.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-07-ai-automation-chatbot.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-07-ai-automation-chatbot.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-08-data-dashboard.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-08-data-dashboard.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-09-machine-learning-project.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-09-machine-learning-project.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-10-custom-full-stack-product.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-10-custom-full-stack-product.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-11-html-css-fixes.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-11-html-css-fixes.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-12-mobile-responsive-redesign.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-12-mobile-responsive-redesign.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-13-seo-speed-optimization.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-13-seo-speed-optimization.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-14-contact-form-lead-generation.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-14-contact-form-lead-generation.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-15-ecommerce-product-catalog.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-15-ecommerce-product-catalog.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-16-auth-secure-backend.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-16-auth-secure-backend.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-17-cloud-deployment-launch.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-17-cloud-deployment-launch.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-18-admin-dashboard-internal-tool.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-18-admin-dashboard-internal-tool.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-19-startup-launch-package.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-19-startup-launch-package.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-20-local-business-website.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-20-local-business-website.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    },
+    {
+      "base": "public/images/ad-campaign/base/ad-21-affordable-starter-pricing.png",
+      "contact_ready": "public/images/ad-campaign/contact-ready/ad-21-affordable-starter-pricing.png",
+      "phone": "7310886906",
+      "email": "devlentra@gmail.com",
+      "size": [
+        1254,
+        1254
+      ]
+    }
+  ]
+}

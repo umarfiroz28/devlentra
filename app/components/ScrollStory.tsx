@@ -56,7 +56,7 @@ export function ScrollStory({ story, index }: ScrollStoryProps) {
             className="absolute inset-0 bg-cover bg-center"
             style={{ backgroundImage: `url(${story.imageSrc})` }}
           />
-          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/88 via-white/26 to-transparent" />
+          <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-white/92 via-white/28 to-transparent" />
           <div className="absolute bottom-4 left-4 right-4 flex items-end justify-between gap-4">
             <div className="rounded-[18px] bg-white/82 px-3 py-2 shadow-[0_14px_34px_rgba(0,0,0,0.16)] backdrop-blur-xl">
               <div className="flex h-14 items-end gap-1.5">

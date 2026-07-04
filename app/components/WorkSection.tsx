@@ -1,3 +1,4 @@
+import { BadgeCheck, Star } from "lucide-react";
 import { projects } from "../data/projects";
 import { AppleButton } from "./AppleButton";
 
@@ -19,6 +20,40 @@ const toneAccent = {
   cyan: "text-[#087B8E] shadow-[0_18px_36px_rgba(6,182,212,0.18)]",
 };
 
+function ProjectVisual({
+  project,
+  isFeatured,
+}: {
+  project: (typeof projects)[number];
+  isFeatured: boolean;
+}) {
+  const Icon = project.icon;
+
+  return (
+    <div
+      className={`relative h-36 overflow-hidden rounded-[22px] bg-gradient-to-br ${toneClass[project.tone]} p-3 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]`}
+      role="img"
+      aria-label={project.imageAlt}
+    >
+      <div className="absolute inset-x-6 top-5 h-20 rounded-full bg-white/50 blur-2xl" />
+      <div
+        className="absolute inset-3 rounded-[20px] bg-cover bg-center shadow-[0_22px_58px_rgba(29,29,31,0.14)]"
+        style={{ backgroundImage: `url(${project.imageSrc})` }}
+      />
+      <div className="absolute inset-3 rounded-[20px] bg-gradient-to-t from-white/78 via-white/12 to-transparent" />
+      <div className="absolute right-7 top-12 flex h-14 w-14 items-center justify-center rounded-[20px] bg-white shadow-[0_18px_36px_rgba(0,0,0,0.14)]">
+        <Icon className={`h-6 w-6 ${toneAccent[project.tone].split(" ")[0]}`} aria-hidden="true" />
+      </div>
+      <div className="absolute left-4 right-4 top-4 flex items-start justify-between gap-3">
+        <span className="inline-flex items-center gap-1.5 rounded-full bg-white/88 px-2.5 py-1 text-[11px] font-semibold text-[#1D1D1F] shadow-[0_12px_28px_rgba(0,0,0,0.12)] backdrop-blur-xl">
+          <Star className="h-3.5 w-3.5 fill-[#FFD60A] text-[#D89B00]" aria-hidden="true" />
+          {isFeatured ? "Most requested" : "Client proof"}
+        </span>
+      </div>
+    </div>
+  );
+}
+
 export function WorkSection() {
   return (
     <section
@@ -34,54 +69,75 @@ export function WorkSection() {
           </h2>
           <p className="apple-body mx-auto mt-5 max-w-[740px]">
             Production work, portfolio builds, and machine learning projects
-            across ecommerce, SaaS, AI tooling, real-estate platforms, and
-            independent engineering.
+            across ecommerce, SaaS, AI tooling, GTM platforms, real-estate
+            products, and independent engineering.
           </p>
         </div>
-        <div className="mt-14 grid gap-5 md:grid-cols-2 lg:grid-cols-3">
-          {projects.map((project) => {
-            const Icon = project.icon;
+        <div className="mt-12 grid auto-rows-fr gap-5 md:grid-cols-2 lg:grid-cols-3">
+          {projects.map((project, index) => {
+            const details = [
+              ["Problem", project.problem],
+              ["Does", project.whatItDoes],
+              ["Outcome", project.outcome],
+            ];
+            const visibleTags = project.tags.slice(0, 3);
+            const hiddenTagCount = project.tags.length - visibleTags.length;
+            const isFeatured = index < 3;
 
             return (
-              <article key={project.title} className="apple-product-tile min-h-[460px] p-6">
-                <div
-                  className={`relative h-44 overflow-hidden rounded-[24px] bg-gradient-to-br ${toneClass[project.tone]} p-3 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]`}
-                  role="img"
-                  aria-label={project.imageAlt}
-                >
-                  <div className="absolute inset-x-6 top-5 h-20 rounded-full bg-white/50 blur-2xl" />
-                  <div
-                    className="absolute inset-3 rounded-[20px] bg-cover bg-center shadow-[0_22px_58px_rgba(29,29,31,0.16)]"
-                    style={{ backgroundImage: `url(${project.imageSrc})` }}
-                  />
-                  <div className="absolute inset-3 rounded-[20px] bg-gradient-to-t from-white/82 via-white/10 to-transparent" />
-                  <div className="absolute bottom-5 left-5 right-5 flex items-end justify-between gap-3">
-                    <span className={`flex h-12 w-12 shrink-0 items-center justify-center rounded-[18px] bg-white/88 backdrop-blur-xl ${toneAccent[project.tone]}`}>
-                      <Icon className="h-5 w-5" aria-hidden="true" />
-                    </span>
-                    <span className="hidden h-8 w-24 rounded-full bg-white/78 shadow-[0_14px_30px_rgba(0,0,0,0.12)] backdrop-blur-xl sm:block" />
-                  </div>
-                </div>
-                <div className="mt-6 flex flex-wrap gap-2">
-                  {project.tags.map((tag) => (
+              <article key={project.title} className="apple-product-tile flex h-full flex-col p-5">
+                <ProjectVisual project={project} isFeatured={isFeatured} />
+                <div className="mt-4 flex flex-wrap gap-2">
+                  {visibleTags.map((tag) => (
                     <span
                       key={tag}
-                      className="rounded-full bg-[#F5F5F7] px-3 py-1 text-xs text-[#6E6E73]"
+                      className="rounded-full bg-[#F5F5F7] px-2.5 py-1 text-[11px] font-medium text-[#6E6E73]"
                     >
                       {tag}
                     </span>
                   ))}
+                  {hiddenTagCount > 0 ? (
+                    <span className="rounded-full bg-[#F5F5F7] px-2.5 py-1 text-[11px] font-medium text-[#6E6E73]">
+                      +{hiddenTagCount}
+                    </span>
+                  ) : null}
                 </div>
-                <p className="mt-5 text-sm font-semibold text-[#0066CC]">
-                  {project.meta}
-                </p>
-                <h3 className="mt-5 text-[26px] font-bold leading-[1.1] tracking-[-0.035em] text-[#1D1D1F]">
+                <div className="mt-4 grid gap-2">
+                  <div className="flex items-center gap-2 text-[12px] font-semibold text-[#0066CC]">
+                    <BadgeCheck className="h-4 w-4" aria-hidden="true" />
+                    <span className="text-clamp-1">Client: {project.clientName}</span>
+                  </div>
+                  <div className="flex flex-wrap gap-2">
+                    <span className="rounded-full bg-[#EAF8EF] px-2.5 py-1 text-[11px] font-semibold text-[#126B35]">
+                      {project.deliveryStatus}
+                    </span>
+                    <span className="rounded-full bg-[#EAF3FF] px-2.5 py-1 text-[11px] font-semibold text-[#0066CC]">
+                      {project.demandSignal}
+                    </span>
+                  </div>
+                </div>
+                <h3 className="mt-4 text-[23px] font-bold leading-[1.1] text-[#1D1D1F] text-clamp-1">
                   {project.title}
                 </h3>
-                <p className="mt-4 text-[16px] leading-7 text-[#6E6E73]">
+                <p className="mt-2 text-[14px] leading-6 text-[#6E6E73] text-clamp-2">
                   {project.description}
                 </p>
-                <div className="mt-5">
+                <div className="mt-4 grid gap-2 rounded-[18px] bg-[#F5F5F7] p-3 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)]">
+                  {details.map(([label, value]) => (
+                    <div key={label} className="grid grid-cols-[72px_1fr] gap-2">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[#0066CC]">
+                        {label}
+                      </p>
+                      <p className="text-[12px] leading-5 text-[#6E6E73] text-clamp-2">
+                        {value}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+                <p className="mt-3 text-[12px] font-semibold text-[#86868B] text-clamp-1">
+                  {project.meta}
+                </p>
+                <div className="mt-auto pt-4">
                   <AppleButton href="#contact" variant="link">
                     Discuss similar work
                   </AppleButton>

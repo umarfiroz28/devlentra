@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import {
   ArrowRight,
   CheckCircle2,
+  CircleAlert,
   GitBranch,
   LoaderCircle,
   Mail,
@@ -17,10 +18,11 @@ import { AppleButton } from "./AppleButton";
 const inputClass =
   "rounded-[16px] border border-[#D2D2D7] bg-white px-4 py-4 text-[17px] text-[#1D1D1F] outline-none transition placeholder:text-[#86868B] focus:border-[#0071E3] focus:ring-4 focus:ring-[#EAF3FF]";
 
-const inquirySubmitDelayMs = 850;
-
 export function ContactSection() {
-  const [submitState, setSubmitState] = useState<"idle" | "loading" | "success">("idle");
+  const [submitState, setSubmitState] = useState<
+    "idle" | "loading" | "success" | "error"
+  >("idle");
+  const [statusMessage, setStatusMessage] = useState("");
   const isSubmitting = submitState === "loading";
 
   async function handleSubmit(event: FormEvent<HTMLFormElement>) {
@@ -30,17 +32,50 @@ export function ContactSection() {
       return;
     }
 
+    const form = event.currentTarget;
+    const formData = new FormData(form);
+    const payload = Object.fromEntries(formData.entries());
+
     setSubmitState("loading");
-    await new Promise((resolve) => {
-      window.setTimeout(resolve, inquirySubmitDelayMs);
-    });
-    event.currentTarget.reset();
-    setSubmitState("success");
+    setStatusMessage("");
+
+    try {
+      const response = await fetch("/api/inquiry", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(payload),
+      });
+      const result = (await response.json().catch(() => null)) as {
+        message?: string;
+      } | null;
+
+      if (!response.ok) {
+        throw new Error(
+          result?.message ?? "The inquiry could not be submitted right now.",
+        );
+      }
+
+      form.reset();
+      setStatusMessage(
+        "Your inquiry was submitted successfully. I will get it on email and get back to you soon.",
+      );
+      setSubmitState("success");
+    } catch (error) {
+      setStatusMessage(
+        error instanceof Error
+          ? error.message
+          : "The inquiry could not be submitted right now.",
+      );
+      setSubmitState("error");
+    }
   }
 
   function handleInput() {
-    if (submitState === "success") {
+    if (submitState === "success" || submitState === "error") {
       setSubmitState("idle");
+      setStatusMessage("");
     }
   }
 
@@ -100,6 +135,14 @@ export function ContactSection() {
             aria-label="Project inquiry form"
             aria-busy={isSubmitting}
           >
+            <input
+              aria-hidden="true"
+              autoComplete="off"
+              className="hidden"
+              name="companyWebsite"
+              tabIndex={-1}
+              type="text"
+            />
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
                 Name
@@ -118,7 +161,7 @@ export function ContactSection() {
             </div>
             <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
               Phone / WhatsApp
-              <input className={inputClass} name="phone" placeholder="+91 7310886909" required />
+              <input className={inputClass} name="phone" placeholder={brand.phone} required />
             </label>
             <div className="grid gap-5 sm:grid-cols-2">
               <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
@@ -177,7 +220,16 @@ export function ContactSection() {
                 role="status"
               >
                 <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
-                Your inquiry was submitted successfully. I will get back to you soon.
+                {statusMessage}
+              </p>
+            ) : null}
+            {submitState === "error" ? (
+              <p
+                className="flex items-start gap-2 rounded-[16px] bg-[#FFF2F0] px-4 py-3 text-[14px] font-medium leading-5 text-[#B42318] shadow-[inset_0_0_0_1px_rgba(180,35,24,0.12)]"
+                role="alert"
+              >
+                <CircleAlert className="mt-0.5 h-4 w-4 shrink-0" aria-hidden="true" />
+                {statusMessage}
               </p>
             ) : null}
           </form>

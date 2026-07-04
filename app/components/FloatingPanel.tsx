@@ -20,9 +20,15 @@ export function FloatingPanel({
 }: FloatingPanelProps) {
   return (
     <motion.div
-      className={`absolute hidden rounded-[22px] border border-white/70 bg-white/86 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.14)] backdrop-blur-2xl md:block ${className}`}
+      className={`absolute z-30 hidden rounded-[22px] border border-white/80 bg-white/94 p-4 shadow-[0_18px_50px_rgba(0,0,0,0.14)] md:block ${className}`}
       initial={{ opacity: 0, y: 24, rotateX: 8 }}
       animate={{ opacity: 1, y: 0, rotateX: 0 }}
+      whileHover={{
+        y: -8,
+        scale: 1.035,
+        boxShadow: "0 24px 64px rgba(0,113,227,0.20)",
+        transition: { type: "spring", stiffness: 340, damping: 26 },
+      }}
       transition={{ delay, duration: 0.72, ease: [0.22, 1, 0.36, 1] }}
       style={{ transformStyle: "preserve-3d" }}
     >
