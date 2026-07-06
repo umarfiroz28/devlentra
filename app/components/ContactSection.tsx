@@ -16,7 +16,9 @@ import { brand, budgetOptions, contactServiceOptions } from "../data/site";
 import { AppleButton } from "./AppleButton";
 
 const inputClass =
-  "rounded-[16px] border border-[#D2D2D7] bg-white px-4 py-4 text-[17px] text-[#1D1D1F] outline-none transition placeholder:text-[#86868B] focus:border-[#0071E3] focus:ring-4 focus:ring-[#EAF3FF]";
+  "box-border w-full max-w-full min-w-0 rounded-[16px] border border-[#D2D2D7] bg-white px-4 py-4 text-[16px] text-[#1D1D1F] outline-none transition placeholder:text-[#86868B] focus:border-[#0071E3] focus:ring-4 focus:ring-[#EAF3FF] sm:text-[17px]";
+const labelClass =
+  "grid min-w-0 gap-2 text-[14px] font-medium text-[#1D1D1F]";
 
 export function ContactSection() {
   const [submitState, setSubmitState] = useState<
@@ -86,8 +88,8 @@ export function ContactSection() {
       className="bg-[#F5F5F7] px-4 py-20 sm:px-6 sm:py-24 lg:px-8"
     >
       <div className="apple-wide-container">
-        <div className="grid gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
-          <div>
+        <div className="grid min-w-0 gap-10 lg:grid-cols-[0.86fr_1.14fr] lg:items-start">
+          <div className="min-w-0">
             <p className="apple-eyebrow">Contact</p>
             <h2 id="contact-title" className="apple-section-title mt-3 text-balance">
               Tell me what you want to build.
@@ -105,25 +107,25 @@ export function ContactSection() {
               </AppleButton>
             </div>
             <div className="mt-10 grid gap-4 text-[14px] text-[#6E6E73]">
-              <p className="flex items-center gap-3">
+              <p className="flex min-w-0 items-center gap-3">
                 <Mail className="h-4 w-4 text-[#0071E3]" aria-hidden="true" />
-                {brand.email}
+                <span className="min-w-0 break-all">{brand.email}</span>
               </p>
-              <p className="flex items-center gap-3">
+              <p className="flex min-w-0 items-center gap-3">
                 <MessageCircle className="h-4 w-4 text-[#0071E3]" aria-hidden="true" />
-                {brand.phone}
+                <span className="min-w-0 break-words">{brand.phone}</span>
               </p>
-              <p className="flex items-center gap-3">
+              <p className="flex min-w-0 items-center gap-3">
                 <Network className="h-4 w-4 text-[#0071E3]" aria-hidden="true" />
-                {brand.linkedin}
+                <span className="min-w-0 break-all">{brand.linkedin}</span>
               </p>
-              <p className="flex items-center gap-3">
+              <p className="flex min-w-0 items-center gap-3">
                 <GitBranch className="h-4 w-4 text-[#0071E3]" aria-hidden="true" />
-                {brand.github}
+                <span className="min-w-0 break-all">{brand.github}</span>
               </p>
-              <p className="flex items-center gap-3">
+              <p className="flex min-w-0 items-center gap-3">
                 <MapPin className="h-4 w-4 text-[#0071E3]" aria-hidden="true" />
-                {brand.location}
+                <span className="min-w-0 break-words">{brand.location}</span>
               </p>
             </div>
           </div>
@@ -131,7 +133,7 @@ export function ContactSection() {
             id="contact-form"
             onInput={handleInput}
             onSubmit={handleSubmit}
-            className="apple-card grid gap-5 p-6 sm:p-8"
+            className="apple-card grid w-full min-w-0 max-w-full gap-5 overflow-hidden p-4 sm:p-8"
             aria-label="Project inquiry form"
             aria-busy={isSubmitting}
           >
@@ -143,12 +145,12 @@ export function ContactSection() {
               tabIndex={-1}
               type="text"
             />
-            <div className="grid gap-5 sm:grid-cols-2">
-              <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
+            <div className="grid min-w-0 gap-5 sm:grid-cols-2">
+              <label className={labelClass}>
                 Name
                 <input className={inputClass} name="name" placeholder="Your name" required />
               </label>
-              <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
+              <label className={labelClass}>
                 Email
                 <input
                   className={inputClass}
@@ -159,12 +161,12 @@ export function ContactSection() {
                 />
               </label>
             </div>
-            <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
+            <label className={labelClass}>
               Phone / WhatsApp
               <input className={inputClass} name="phone" placeholder={brand.phone} required />
             </label>
-            <div className="grid gap-5 sm:grid-cols-2">
-              <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
+            <div className="grid min-w-0 gap-5 sm:grid-cols-2">
+              <label className={labelClass}>
                 Service
                 <select className={inputClass} name="service" defaultValue="" required>
                   <option value="" disabled>
@@ -175,7 +177,7 @@ export function ContactSection() {
                   ))}
                 </select>
               </label>
-              <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
+              <label className={labelClass}>
                 Budget range
                 <select className={inputClass} name="budget" defaultValue="" required>
                   <option value="" disabled>
@@ -187,7 +189,7 @@ export function ContactSection() {
                 </select>
               </label>
             </div>
-            <label className="grid gap-2 text-[14px] font-medium text-[#1D1D1F]">
+            <label className={labelClass}>
               Message
               <textarea
                 className={`${inputClass} min-h-40 resize-y`}

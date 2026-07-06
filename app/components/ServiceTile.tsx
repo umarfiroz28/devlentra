@@ -82,7 +82,7 @@ export function ServiceTile({ service, index }: ServiceTileProps) {
 
   return (
     <article
-      className="apple-product-tile min-h-[280px] p-5 sm:p-6"
+      className="apple-product-tile min-h-[280px] min-w-0 p-4 sm:p-6"
       style={{ animationDelay: `${Math.min(index * 45, 280)}ms` }}
     >
       <div className="relative z-10 grid h-full gap-5 md:grid-cols-[minmax(0,1fr)_230px] md:items-stretch xl:grid-cols-[minmax(0,1fr)_260px]">
@@ -93,20 +93,20 @@ export function ServiceTile({ service, index }: ServiceTileProps) {
                 <span className="absolute inset-[1px] rounded-[19px] bg-white/45" />
                 <Icon className={`relative h-6 w-6 ${accent.icon}`} aria-hidden="true" />
               </span>
-              <span className="rounded-full bg-[#F5F5F7] px-3 py-1 text-[11px] font-bold uppercase leading-none tracking-[0.11em] text-[#6E6E73] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]">
+              <span className="min-w-0 rounded-full bg-[#F5F5F7] px-3 py-1 text-[11px] font-bold uppercase leading-none tracking-normal text-[#6E6E73] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)] sm:tracking-[0.11em]">
                 {badgeLabel}
               </span>
             </div>
-            <div className={`rounded-[22px] bg-[#1D1D1F] px-4 py-3 text-right text-white ${accent.priceGlow}`}>
+            <div className={`max-w-full rounded-[22px] bg-[#1D1D1F] px-4 py-3 text-right text-white ${accent.priceGlow}`}>
               <p className="text-[10px] font-bold uppercase leading-none tracking-[0.12em] text-white/58">
                 Starts at
               </p>
-              <p className="mt-1 text-[28px] font-bold leading-none tracking-[-0.045em] sm:text-[31px]">
+              <p className="mt-1 break-words text-[28px] font-bold leading-none tracking-normal sm:text-[31px]">
                 {price}
               </p>
             </div>
           </div>
-          <h3 className="mt-6 max-w-[460px] text-[28px] font-bold leading-[1.08] tracking-[-0.04em] text-[#1D1D1F] sm:text-[32px]">
+          <h3 className="mt-6 max-w-[460px] break-words text-[28px] font-bold leading-[1.08] tracking-normal text-[#1D1D1F] sm:text-[32px]">
             {service.title}
           </h3>
           <p className="mt-3 max-w-[560px] text-[16px] leading-6 text-[#6E6E73]">

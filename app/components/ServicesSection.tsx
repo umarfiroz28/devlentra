@@ -1,6 +1,57 @@
 import Image from "next/image";
+import {
+  Code2,
+  Globe2,
+  ServerCog,
+  Store,
+  type LucideIcon,
+} from "lucide-react";
 import { services } from "../data/services";
 import { ServiceTile } from "./ServiceTile";
+
+type ServiceHighlight = {
+  label: string;
+  value: string;
+  detail: string;
+  icon: LucideIcon;
+  itemClassName: string;
+  iconClassName: string;
+};
+
+const serviceHighlights: ServiceHighlight[] = [
+  {
+    label: "WordPress",
+    value: "Starts at Rs 1,499",
+    detail: "Business sites, blogs, forms, and SEO basics.",
+    icon: Globe2,
+    itemClassName: "bg-[#F4F0FF] shadow-[inset_0_0_0_1px_rgba(99,74,255,0.13)]",
+    iconClassName: "bg-white text-[#6E56CF]",
+  },
+  {
+    label: "Shopify",
+    value: "Starts at Rs 1,699",
+    detail: "Starter stores, products, collections, and checkout polish.",
+    icon: Store,
+    itemClassName: "bg-[#EFFAF4] shadow-[inset_0_0_0_1px_rgba(33,150,83,0.13)]",
+    iconClassName: "bg-white text-[#1F8A4C]",
+  },
+  {
+    label: "React / Next.js",
+    value: "Starts at Rs 1,799",
+    detail: "Modern landing pages, portfolios, and SaaS-style sites.",
+    icon: Code2,
+    itemClassName: "bg-[#EFF6FF] shadow-[inset_0_0_0_1px_rgba(0,113,227,0.14)]",
+    iconClassName: "bg-white text-[#0071E3]",
+  },
+  {
+    label: "API, AI, dashboard",
+    value: "Scoped honestly",
+    detail: "Full-stack builds after a quick requirement discussion.",
+    icon: ServerCog,
+    itemClassName: "bg-[#FFF7ED] shadow-[inset_0_0_0_1px_rgba(234,88,12,0.14)]",
+    iconClassName: "bg-white text-[#C75A12]",
+  },
+];
 
 export function ServicesSection() {
   return (
@@ -16,11 +67,35 @@ export function ServicesSection() {
             <h2 id="services-title" className="apple-section-title mt-3 text-balance">
               High-demand services at practical starter prices.
             </h2>
-            <p className="apple-body mx-auto mt-5 max-w-[760px] lg:mx-0">
-              WordPress starts at Rs 1,499, Shopify at Rs 1,699, and React or
-              Next.js websites at Rs 1,799. Larger API, AI, dashboard, and
-              full-stack builds are scoped honestly after a quick discussion.
-            </p>
+            <ul className="mx-auto mt-7 grid max-w-[760px] gap-3 sm:grid-cols-2 lg:mx-0">
+              {serviceHighlights.map((item) => {
+                const HighlightIcon = item.icon;
+
+                return (
+                  <li
+                    key={item.label}
+                    className={`flex min-h-[112px] items-start gap-3 rounded-[24px] p-4 text-left ${item.itemClassName}`}
+                  >
+                    <span
+                      className={`flex h-11 w-11 shrink-0 items-center justify-center rounded-full shadow-[0_12px_28px_rgba(0,0,0,0.08)] ${item.iconClassName}`}
+                    >
+                      <HighlightIcon className="h-5 w-5" aria-hidden="true" />
+                    </span>
+                    <span className="min-w-0">
+                      <span className="block text-[13px] font-bold uppercase leading-none text-[#6E6E73]">
+                        {item.label}
+                      </span>
+                      <span className="mt-2 block text-[19px] font-bold leading-6 text-[#1D1D1F]">
+                        {item.value}
+                      </span>
+                      <span className="mt-1 block text-[13px] leading-5 text-[#6E6E73]">
+                        {item.detail}
+                      </span>
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
           </div>
 
           <div

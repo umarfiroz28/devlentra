@@ -16,20 +16,20 @@ export function Footer() {
       aria-label="Footer"
       className="border-t border-[#D2D2D7] bg-[#F5F5F7] px-4 py-10 sm:px-6 lg:px-8"
     >
-      <div className="apple-wide-container">
+      <div className="apple-wide-container min-w-0">
         <p className="max-w-[780px] border-b border-[#D2D2D7] pb-5 text-[12px] leading-5 text-[#6E6E73]">
           Devlentra is an independent technology services brand building
           affordable websites, ecommerce stores, AI tools, data products, and
           full-stack applications for businesses in India and worldwide.
         </p>
         <div className="grid gap-8 border-b border-[#D2D2D7] py-7 text-[12px] leading-5 md:grid-cols-4">
-          <div>
+          <div className="min-w-0">
             <LogoMark />
             <p className="mt-3 text-[#6E6E73]">{brand.owner}</p>
             <p className="mt-1 text-[#6E6E73]">{brand.title}</p>
-            <p className="mt-3 text-[#6E6E73]">{brand.email}</p>
-            <p className="mt-1 text-[#6E6E73]">{brand.phone}</p>
-            <p className="mt-1 text-[#6E6E73]">{brand.location}</p>
+            <p className="mt-3 break-all text-[#6E6E73]">{brand.email}</p>
+            <p className="mt-1 break-words text-[#6E6E73]">{brand.phone}</p>
+            <p className="mt-1 break-words text-[#6E6E73]">{brand.location}</p>
           </div>
           <div>
             <p className="font-semibold text-[#1D1D1F]">Services</p>
@@ -55,12 +55,12 @@ export function Footer() {
               ))}
             </ul>
           </div>
-          <div>
+          <div className="min-w-0">
             <p className="font-semibold text-[#1D1D1F]">Connect</p>
             <ul className="mt-3 grid gap-2 text-[#6E6E73]">
-              <li>{brand.linkedin}</li>
-              <li>{brand.github}</li>
-              <li>{brand.portfolio}</li>
+              <li className="break-all">{brand.linkedin}</li>
+              <li className="break-all">{brand.github}</li>
+              <li className="break-all">{brand.portfolio}</li>
             </ul>
           </div>
         </div>

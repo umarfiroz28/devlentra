@@ -91,22 +91,22 @@ export function PricingSection() {
           {packages.map((item) => (
             <article
               key={item.title}
-              className={`apple-product-tile h-full p-4 sm:p-5 ${
+              className={`apple-product-tile h-full min-w-0 p-4 sm:p-5 ${
                 item.popular ? "ring-2 ring-[#0071E3]/20" : ""
               }`}
             >
-              <div className="flex h-full min-h-[470px] flex-col">
+              <div className="flex h-full min-h-[470px] min-w-0 flex-col">
                 <PackageVisual item={item} />
 
                 <div className="mt-4">
                   <h3
-                    className="text-[21px] font-bold leading-tight text-[#1D1D1F]"
+                    className="break-words text-[21px] font-bold leading-tight text-[#1D1D1F]"
                   >
                     {item.title}
                   </h3>
                 </div>
                 <p
-                  className="mt-3 text-[34px] font-bold leading-none text-[#1D1D1F]"
+                  className="mt-3 break-words text-[34px] font-bold leading-none text-[#1D1D1F]"
                 >
                   {item.startingAt}
                 </p>
@@ -123,13 +123,13 @@ export function PricingSection() {
                     return (
                       <span
                         key={stackItem.label}
-                        className="inline-flex items-center gap-1.5 rounded-full bg-[#F5F5F7] px-2.5 py-1 text-[11px] font-semibold text-[#1D1D1F] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]"
+                        className="inline-flex max-w-full items-center gap-1.5 rounded-full bg-[#F5F5F7] px-2.5 py-1 text-[11px] font-semibold text-[#1D1D1F] shadow-[inset_0_0_0_1px_rgba(0,0,0,0.06)]"
                       >
                         <StackIcon
                           className="h-3.5 w-3.5 text-[#0071E3]"
                           aria-hidden="true"
                         />
-                        {stackItem.label}
+                        <span className="min-w-0 truncate">{stackItem.label}</span>
                       </span>
                     );
                   })}

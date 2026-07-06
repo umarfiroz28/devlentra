@@ -278,7 +278,7 @@ export function GlobalNav() {
       </div>
 
       {isOpen ? (
-        <div className="border-t border-white/60 bg-[#FBFBFD]/78 shadow-[0_24px_60px_rgba(0,0,0,0.12)] backdrop-blur-[34px] backdrop-saturate-[180%] md:hidden">
+        <div className="overflow-x-clip border-t border-white/60 bg-[#FBFBFD]/78 shadow-[0_24px_60px_rgba(0,0,0,0.12)] backdrop-blur-[34px] backdrop-saturate-[180%] md:hidden">
           <div className="apple-wide-container grid py-3">
             {navItems.map((item) => (
               <a
@@ -308,7 +308,7 @@ export function GlobalNav() {
                       <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-white text-[#0071E3]">
                         <Icon className="h-4 w-4" aria-hidden="true" />
                       </span>
-                      <span className="text-[14px] font-semibold">{service.title}</span>
+                      <span className="min-w-0 break-words text-[14px] font-semibold">{service.title}</span>
                     </a>
                   );
                 })}
@@ -321,19 +321,19 @@ export function GlobalNav() {
               <div className="mt-3 grid gap-2 text-[14px] text-[#6E6E73]">
                 <a
                   href={phoneHref}
-                  className="apple-focus flex items-center gap-2 rounded-[14px] px-2 py-2 transition hover:bg-[#F5F5F7]"
+                  className="apple-focus flex min-w-0 items-center gap-2 rounded-[14px] px-2 py-2 transition hover:bg-[#F5F5F7]"
                   onClick={closeMenus}
                 >
                   <Phone className="h-4 w-4 text-[#0071E3]" aria-hidden="true" />
-                  {brand.phone}
+                  <span className="min-w-0 break-words">{brand.phone}</span>
                 </a>
                 <a
                   href={emailHref}
-                  className="apple-focus flex items-center gap-2 rounded-[14px] px-2 py-2 transition hover:bg-[#F5F5F7]"
+                  className="apple-focus flex min-w-0 items-center gap-2 rounded-[14px] px-2 py-2 transition hover:bg-[#F5F5F7]"
                   onClick={closeMenus}
                 >
                   <Mail className="h-4 w-4 text-[#0071E3]" aria-hidden="true" />
-                  {brand.email}
+                  <span className="min-w-0 break-all">{brand.email}</span>
                 </a>
                 <a
                   href={whatsappHref}

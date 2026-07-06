@@ -24,7 +24,7 @@ export function LogoMark({
 
   return (
     <span
-      className={`inline-flex items-center gap-2.5 ${className}`.trim()}
+      className={`inline-flex min-w-0 items-center gap-2.5 ${className}`.trim()}
       aria-label="Devlentra logo"
     >
       <span
@@ -41,7 +41,7 @@ export function LogoMark({
         />
       </span>
       {compact ? null : (
-        <span className={wordmarkClass}>Devlentra</span>
+        <span className={`${wordmarkClass} min-w-0 truncate`}>Devlentra</span>
       )}
     </span>
   );

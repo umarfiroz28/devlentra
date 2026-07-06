@@ -85,7 +85,7 @@ export function WorkSection() {
             const isFeatured = index < 3;
 
             return (
-              <article key={project.title} className="apple-product-tile flex h-full flex-col p-5">
+              <article key={project.title} className="apple-product-tile flex h-full min-w-0 flex-col p-4 sm:p-5">
                 <ProjectVisual project={project} isFeatured={isFeatured} />
                 <div className="mt-4 flex flex-wrap gap-2">
                   {visibleTags.map((tag) => (
@@ -105,13 +105,13 @@ export function WorkSection() {
                 <div className="mt-4 grid gap-2">
                   <div className="flex items-center gap-2 text-[12px] font-semibold text-[#0066CC]">
                     <BadgeCheck className="h-4 w-4" aria-hidden="true" />
-                    <span className="text-clamp-1">Client: {project.clientName}</span>
+                    <span className="min-w-0 text-clamp-1">Client: {project.clientName}</span>
                   </div>
                   <div className="flex flex-wrap gap-2">
-                    <span className="rounded-full bg-[#EAF8EF] px-2.5 py-1 text-[11px] font-semibold text-[#126B35]">
+                    <span className="max-w-full rounded-full bg-[#EAF8EF] px-2.5 py-1 text-[11px] font-semibold text-[#126B35]">
                       {project.deliveryStatus}
                     </span>
-                    <span className="rounded-full bg-[#EAF3FF] px-2.5 py-1 text-[11px] font-semibold text-[#0066CC]">
+                    <span className="max-w-full rounded-full bg-[#EAF3FF] px-2.5 py-1 text-[11px] font-semibold text-[#0066CC]">
                       {project.demandSignal}
                     </span>
                   </div>
@@ -122,13 +122,13 @@ export function WorkSection() {
                 <p className="mt-2 text-[14px] leading-6 text-[#6E6E73] text-clamp-2">
                   {project.description}
                 </p>
-                <div className="mt-4 grid gap-2 rounded-[18px] bg-[#F5F5F7] p-3 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)]">
+                <div className="mt-4 grid min-w-0 gap-2 rounded-[18px] bg-[#F5F5F7] p-3 shadow-[inset_0_0_0_1px_rgba(0,0,0,0.05)]">
                   {details.map(([label, value]) => (
-                    <div key={label} className="grid grid-cols-[72px_1fr] gap-2">
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.06em] text-[#0066CC]">
+                    <div key={label} className="grid min-w-0 grid-cols-[minmax(58px,72px)_minmax(0,1fr)] gap-2">
+                      <p className="break-words text-[10px] font-semibold uppercase tracking-normal text-[#0066CC] sm:text-[11px] sm:tracking-[0.06em]">
                         {label}
                       </p>
-                      <p className="text-[12px] leading-5 text-[#6E6E73] text-clamp-2">
+                      <p className="min-w-0 break-words text-[12px] leading-5 text-[#6E6E73] text-clamp-2">
                         {value}
                       </p>
                     </div>

@@ -42,11 +42,17 @@
 }
 
 html {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   scroll-behavior: smooth;
   background: var(--apple-bg);
 }
 
 body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: clip;
   margin: 0;
   background: var(--apple-bg);
   color: var(--apple-text);
@@ -83,14 +89,23 @@ a {
   text-decoration: none;
 }
 
+main,
+header,
+footer,
+section {
+  max-width: 100%;
+}
+
 .apple-container {
   width: min(100% - 32px, var(--apple-container));
   margin-inline: auto;
+  min-width: 0;
 }
 
 .apple-wide-container {
   width: min(100% - 32px, var(--apple-wide-container));
   margin-inline: auto;
+  min-width: 0;
 }
 
 .apple-nav {
@@ -318,6 +333,11 @@ a {
 }
 
 @media (max-width: 767px) {
+  .apple-container,
+  .apple-wide-container {
+    width: min(100% - 24px, var(--apple-container));
+  }
+
   .apple-headline {
     letter-spacing: -0.045em;
   }
